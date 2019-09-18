@@ -17,7 +17,7 @@ We are creating this application to help ease the burden for Texas State student
 The purpose of this project is to help future Texas State students succeed academically and socially.
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+![Example screenshot](https://i.imgur.com/fuOoJle.png)
 
 ## Technologies
 * Jaunt - Java Web Scraping & JSON Querying
