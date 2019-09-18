@@ -1,5 +1,5 @@
 # Texas State Desktop Application
-> A team consisting of Charlie Orch, Sam Swnason, Erik Sager, Logan Schmidt, and Mesut Apil.
+> A team consisting of Charlie Orch, Sam Swanson, Erik Sager, Logan Schmidt, and Mesut Apil.
 Our team is creating a desktop application for our fellow Texas State students that allows them to see Texas State University services such as buses, food, academic work, and so on. 
 We are creating this application to help ease the burden for Texas State students that find it hard to balance school work and everyday life.
 
