@@ -1,14 +1,19 @@
 package options;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -66,7 +71,6 @@ public class OptionsPageController implements Initializable {
 
     @FXML
     public void saveButtonPress(ActionEvent actionEvent) throws IOException{
-
         FileWriter fileWriter = new FileWriter("options.txt");
         PrintWriter printWriter = new PrintWriter(fileWriter);
         printWriter.println(FULLSCREEN);
@@ -92,5 +96,33 @@ public class OptionsPageController implements Initializable {
         if(FULLSCREEN)
             appStage.setFullScreen(true);
         appStage.show();
+    }
+
+    public static void displayNotification(String text){
+        if(!NOTIFICATIONS)
+            return;
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText(null);
+        alert.setTitle("Texas State Desktop Application");
+        alert.setContentText(text);
+        alert.initStyle(StageStyle.UTILITY);
+        ((Stage) alert.getDialogPane().getScene().getWindow()).setAlwaysOnTop(true);
+        Rectangle2D bounds = Screen.getPrimary().getVisualBounds();
+        alert.setX(bounds.getMaxX() - 430);
+        alert.setY(10);
+        Thread thread = new Thread(() -> {
+            try {
+                // Wait for 5 secs
+                Thread.sleep(10000);
+                if (alert.isShowing()) {
+                    Platform.runLater(() -> alert.close());
+                }
+            } catch (Exception exp) {
+                exp.printStackTrace();
+            }
+        });
+        thread.setDaemon(true);
+        thread.start();
+        alert.showAndWait();
     }
 }
