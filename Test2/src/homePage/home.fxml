@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
@@ -14,18 +15,38 @@
    <children>
       <BorderPane prefHeight="200.0" prefWidth="200.0">
          <bottom>
-            <HBox prefHeight="48.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="844.0" minWidth="10.0" prefWidth="601.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="605.0" minWidth="10.0" prefWidth="599.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="50.0" minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
                <children>
-                  <Label fx:id="loginButton" onMouseClicked="#loginButtonPress" text="Log in" textAlignment="CENTER" translateX="18.0" translateY="9.0">
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
+                  <HBox prefHeight="48.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="loginButton" onMouseClicked="#loginButtonPress" text="Log in" textAlignment="CENTER" translateX="18.0" translateY="9.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <ImageView fitHeight="33.0" fitWidth="35.0" onMouseClicked="#optionsButtonPress" pickOnBounds="true" preserveRatio="true" translateX="-10.0">
+                           <image>
+                              <Image url="@../img/settingsIcon.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
                </children>
-            </HBox>
+            </GridPane>
          </bottom>
          <top>
             <HBox alignment="CENTER" prefHeight="55.0" prefWidth="1200.0" style="-fx-background-color: #501214;" BorderPane.alignment="CENTER">

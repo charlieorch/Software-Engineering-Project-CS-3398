@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import options.OptionsPageController;
 
 import java.io.IOException;
 import java.net.URL;
@@ -31,7 +32,19 @@ public class HomePageController implements Initializable {
         appStage=(Stage) loginButton.getScene().getWindow();
         root= FXMLLoader.load(getClass().getResource("/login/login.fxml"));
 
-        Scene scene=new Scene(root);
+        Scene scene=new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
+        appStage.setScene(scene);
+        appStage.show();
+    }
+
+    @FXML
+    public void optionsButtonPress(MouseEvent actionEvent) throws IOException {
+        Stage appStage;
+        Parent root;
+        appStage=(Stage) loginButton.getScene().getWindow();
+        root= FXMLLoader.load(getClass().getResource("/options/options.fxml"));
+
+        Scene scene=new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
         appStage.setScene(scene);
         appStage.show();
     }
@@ -43,7 +56,7 @@ public class HomePageController implements Initializable {
         appStage=(Stage) loginButton.getScene().getWindow();
         root= FXMLLoader.load(getClass().getResource("/academicCalender/calender.fxml"));
 
-        Scene scene=new Scene(root);
+        Scene scene=new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
         appStage.setScene(scene);
         appStage.show();
     }
@@ -55,7 +68,7 @@ public class HomePageController implements Initializable {
         appStage=(Stage) loginButton.getScene().getWindow();
         root= FXMLLoader.load(getClass().getResource("/GPA/GPA.fxml"));
 
-        Scene scene=new Scene(root);
+        Scene scene=new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
         appStage.setScene(scene);
         appStage.show();
     }
