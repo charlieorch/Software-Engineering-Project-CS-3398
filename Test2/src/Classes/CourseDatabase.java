@@ -15,7 +15,9 @@ public class CourseDatabase {
     }
 
     public void addNewCourse(Course c) {
-        courseListing.add(c);
+
+        if(!this.courseExists(c))
+            courseListing.add(c);
     }
 
     public void removeCourse(Course c) {
