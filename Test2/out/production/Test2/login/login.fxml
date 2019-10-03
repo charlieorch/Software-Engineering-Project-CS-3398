@@ -23,6 +23,10 @@
                         <Font size="36.0" />
                      </font>
                   </Label>
+                  <Button fx:id="exitButton" alignment="TOP_RIGHT" layoutX="860.0" layoutY="-10.0" mnemonicParsing="false" onAction="#handleExitButtonAction" onMouseClicked="#handleExitButtonAction" prefHeight="18.0" prefWidth="35.0" style="-fx-background-color: #501214;" text="X" textAlignment="CENTER" textFill="#f5f5f5">
+                     <font>
+                        <Font size="27.0" />
+                     </font></Button>
                </children>
             </AnchorPane>
          </top>

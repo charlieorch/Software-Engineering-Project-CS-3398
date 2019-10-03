@@ -16,6 +16,7 @@ public class LoginPageController {
     @FXML
     public Button backButton;
     public Button enterButton;
+    public Button exitButton;
 
     public void enterHomepage(ActionEvent actionEvent) throws IOException {
         Stage appStage;
@@ -35,5 +36,10 @@ public class LoginPageController {
         Scene scene=new Scene(root);
         appStage.setScene(scene);
         appStage.show();
+    }
+
+    public void handleExitButtonAction(ActionEvent event) {
+        Stage stage = (Stage) exitButton.getScene().getWindow();
+        stage.close();
     }
 }
