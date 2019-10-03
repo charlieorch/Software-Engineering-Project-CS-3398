@@ -31,3 +31,7 @@ Test2/out/production/Test2/Student/student.fxml
 Test2/out/production/Test2/login/LoginPageController.class
 Test2/out/production/Test2/GPA/GPA.fxml
 Test2/out/production/Test2/Classes/classes.fxml
+Test2/out/production/Test2/Classes/Course.class
+Test2/out/production/Test2/Classes/OpenCourse.class
+Test2/out/production/Test2/Classes/CourseDatabase.class
+Test2/out/production/Test2/Student/Student.class
