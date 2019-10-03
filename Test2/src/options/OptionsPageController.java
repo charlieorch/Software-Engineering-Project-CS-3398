@@ -27,6 +27,7 @@ public class OptionsPageController implements Initializable {
     public static double PREF_HEIGHT = 600;
     public static boolean FULLSCREEN = false;
     public static boolean NOTIFICATIONS = true;
+
     public double defaultPrefWith = 900;
     public double defaultPrefHeight = 600;
     public boolean defaultFullscreen = false;

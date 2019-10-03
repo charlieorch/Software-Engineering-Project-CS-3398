@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import options.OptionsPageController;
 
 import javax.xml.namespace.QName;
 import java.io.IOException;
@@ -33,7 +34,7 @@ public class LoginPageController {
         Parent root;
         appStage=(Stage) backButton.getScene().getWindow();
         root= FXMLLoader.load(getClass().getResource("/homePage/home.fxml"));
-        Scene scene=new Scene(root);
+        Scene scene=new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
         appStage.setScene(scene);
         appStage.show();
     }
