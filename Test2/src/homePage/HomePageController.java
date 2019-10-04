@@ -82,5 +82,17 @@ public class HomePageController implements Initializable {
         stage.close();
     }
 
+    @FXML
+    public void diningButtonPress(MouseEvent actionEvent) throws IOException {
+        Stage appStage;
+        Parent root;
+        appStage=(Stage) loginButton.getScene().getWindow();
+        root= FXMLLoader.load(getClass().getResource("/Dining/dining.fxml"));
+
+        Scene scene=new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
+        appStage.setScene(scene);
+        appStage.show();
+    }
+
 
 }

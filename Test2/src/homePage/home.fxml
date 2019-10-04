@@ -118,7 +118,7 @@
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="211.0" layoutY="107.0" onMouseClicked="#AcademicCalenderPress" text="Dining" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <Label layoutX="211.0" layoutY="107.0" onMouseClicked="#diningButtonPress" text="Dining" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
