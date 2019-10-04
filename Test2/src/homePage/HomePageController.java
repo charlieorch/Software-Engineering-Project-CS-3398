@@ -77,6 +77,18 @@ public class HomePageController implements Initializable {
     }
 
     @FXML
+    public void gradeButtonPressed(MouseEvent actionEvent) throws IOException {
+        Stage appStage;
+        Parent root;
+        appStage=(Stage) loginButton.getScene().getWindow();
+        root= FXMLLoader.load(getClass().getResource("/Grade/grade.fxml"));
+
+        Scene scene=new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
+        appStage.setScene(scene);
+        appStage.show();
+    }
+
+    @FXML
     public void handleExitButtonAction(ActionEvent event) {
         Stage stage = (Stage) exitButton.getScene().getWindow();
         stage.close();
@@ -94,5 +106,39 @@ public class HomePageController implements Initializable {
         appStage.show();
     }
 
+    @FXML
+    public void studentButtonPress(MouseEvent actionEvent) throws IOException {
+        Stage appStage;
+        Parent root;
+        appStage=(Stage) loginButton.getScene().getWindow();
+        root= FXMLLoader.load(getClass().getResource("/Student/student.fxml"));
 
+        Scene scene=new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
+        appStage.setScene(scene);
+        appStage.show();
+    }
+
+    @FXML
+    public void classesButtonPress(MouseEvent actionEvent) throws IOException {
+        Stage appStage;
+        Parent root;
+        appStage=(Stage) loginButton.getScene().getWindow();
+        root= FXMLLoader.load(getClass().getResource("/Classes/classes.fxml"));
+
+        Scene scene=new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
+        appStage.setScene(scene);
+        appStage.show();
+    }
+
+    @FXML
+    public void gradeButtonPress(MouseEvent actionEvent) throws IOException {
+        Stage appStage;
+        Parent root;
+        appStage=(Stage) loginButton.getScene().getWindow();
+        root= FXMLLoader.load(getClass().getResource("/Grade/grade.fxml"));
+
+        Scene scene=new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
+        appStage.setScene(scene);
+        appStage.show();
+    }
 }
