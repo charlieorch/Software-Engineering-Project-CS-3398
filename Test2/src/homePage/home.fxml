@@ -102,7 +102,7 @@
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="270.0" layoutY="330.0" onMouseClicked="#AcademicCalenderPress" text="Grade Calculator" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <Label layoutX="270.0" layoutY="330.0" onMouseClicked="#gradeButtonPressed" text="Grade Calculator" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
