@@ -24,7 +24,7 @@ public class LoginPageController {
         Parent root;
         appStage=(Stage) enterButton.getScene().getWindow();
         root= FXMLLoader.load(getClass().getResource("/homePage/home.fxml"));
-        Scene scene=new Scene(root);
+        Scene scene=new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
         appStage.setScene(scene);
         appStage.show();
     }

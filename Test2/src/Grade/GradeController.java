@@ -18,10 +18,12 @@ public class GradeController {
     public Button backButton;
 
     public void gradeBack(ActionEvent actionEvent) throws IOException {
-
+        Stage appStage;
+        Parent root;
+        appStage=(Stage) backButton.getScene().getWindow();
+        root= FXMLLoader.load(getClass().getResource("/homePage/home.fxml"));
+        Scene scene=new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
+        appStage.setScene(scene);
+        appStage.show();
     }
-
-
-
-
 }
