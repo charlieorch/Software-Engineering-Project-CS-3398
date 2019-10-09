@@ -41,7 +41,19 @@ To-do list:
 * Wow improvement to be done 2
 
 ## Status
-Project is: _in progress_, _finished_, _no longer continue_ and why?
+Project is: in progress
+* Erik - My next step is to work on connecting our login page to the web connection functionality.
+* Logan - 
+* Charlie - 
+* Sam - 
+* Mesut - My next step is to implement code on the interface so it actually works.
+
+## Accomplishments
+* Erik - I was able to create a system for changing a saving the users desired settings for the application. This system will allow for more future settings to be easily added, implemented, and changed from the options page that can effect the application as a whole.
+* Logan - 
+* Charlie - 
+* Sam - 
+* Mesut - I did the grade calculator interface and swipe calculator graph . Grade calculator is under the grade file in src. Swipe graph is under dining file in src. Grade calculator serves a purpose to calculate what the students grade will be in a certain graph. Swipe graph is the burn down chart of how many swipes are left as well as daily consumption.
 
 ## Inspiration
 Add here credits. Project inspired by..., based on...
