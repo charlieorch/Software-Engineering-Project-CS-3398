@@ -49,7 +49,7 @@ Project is: in progress
 * Mesut - My next step is to implement code on the interface so it actually works.
 
 ## Accomplishments
-* Erik - I was able to create a system for changing a saving the users desired settings for the application. This system will allow for more future settings to be easily added, implemented, and changed from the options page that can effect the application as a whole.
+* Erik - I was able to create a system for changing a saving the users desired settings for the application. This system will allow for more future settings to be easily added, implemented, and changed from the options page that can effect the application as a whole. This commit shows the new file OptionsPageController that contains the code. https://github.com/CS3398-Enclave-Boys/CS3398-Enclave-F2019/commit/809c7369da7b0c9e36b15bd0ef89a0de52815041
 * Logan - 
 * Charlie - 
 * Sam - 
