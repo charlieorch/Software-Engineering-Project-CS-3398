@@ -43,14 +43,14 @@ To-do list:
 ## Status
 Project is: in progress
 * Erik - My next step is to work on connecting our login page to the web connection functionality.
-* Logan - 
+* Logan - My next step will be to add courses to the course database and add more functionality for it.
 * Charlie - 
 * Sam - 
 * Mesut - My next step is to implement code on the interface so it actually works.
 
 ## Accomplishments
 * Erik - I was able to create a system for changing a saving the users desired settings for the application. This system will allow for more future settings to be easily added, implemented, and changed from the options page that can effect the application as a whole. This commit shows the new file OptionsPageController that contains the code. https://github.com/CS3398-Enclave-Boys/CS3398-Enclave-F2019/commit/809c7369da7b0c9e36b15bd0ef89a0de52815041
-* Logan - 
+* Logan - I created packages for student accounts, courses, and began creating a database to store potential courses locally. This will allow users to search for classes and apply actively open courses to their student account. This commit shows the files I added for these packages: https://github.com/CS3398-Enclave-Boys/CS3398-Enclave-F2019/commit/a9ecf18df03fa707d6553f7ad72bee89d6e71ca4
 * Charlie - 
 * Sam - 
 * Mesut - I did the grade calculator interface and swipe calculator graph . Grade calculator is under the grade file in src. Swipe graph is under dining file in src. Grade calculator serves a purpose to calculate what the students grade will be in a certain graph. Swipe graph is the burn down chart of how many swipes are left as well as daily consumption.
