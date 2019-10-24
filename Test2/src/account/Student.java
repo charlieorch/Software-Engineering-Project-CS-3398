@@ -2,18 +2,38 @@ package account;
 
 import com.jaunt.*;
 import com.jaunt.component.Table;
+import homePage.HomePageController;
+import homePage.Main;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import options.OptionsPageController;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
-public class Student {
+public class Student implements Serializable{
     public String firstName;
     public String lastName;
     public String id;
     public Schedule schedule;
 
-    public Schedule generateStudent(File file) throws NotFound, IOException, ResponseException {
+    public static void createNewStudent(File file) throws ResponseException, IOException, NotFound {
+        Main.student = new Student();
+        Main.student.generateStudent(file);
+        Main.student.saveStudentData();
+    }
+
+    public void saveStudentData() throws IOException {
+        FileOutputStream file = new FileOutputStream(firstName + "_" + lastName + ".ser");
+        ObjectOutputStream out = new ObjectOutputStream(file);
+        out.writeObject(this);
+        out.close();
+        file.close();
+    }
+
+    public void generateStudent(File file) throws NotFound, IOException, ResponseException {
         UserAgent userAgent = new UserAgent();
         userAgent.open(file);
         Document doc = userAgent.doc;
@@ -61,8 +81,5 @@ public class Student {
             courses.add(course);
         }
         schedule.courses = courses;
-        return schedule;
     }
-
-
 }

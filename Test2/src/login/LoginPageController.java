@@ -20,20 +20,16 @@ public class LoginPageController {
     public Button exitButton;
 
     public void enterHomepage(ActionEvent actionEvent) throws IOException {
-        Stage appStage;
-        Parent root;
-        appStage=(Stage) enterButton.getScene().getWindow();
-        root= FXMLLoader.load(getClass().getResource("/homePage/home.fxml"));
+        Stage appStage = (Stage) enterButton.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/homePage/home.fxml"));
         Scene scene=new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
         appStage.setScene(scene);
         appStage.show();
     }
 
     public void loginBack(ActionEvent actionEvent) throws IOException {
-        Stage appStage;
-        Parent root;
-        appStage=(Stage) backButton.getScene().getWindow();
-        root= FXMLLoader.load(getClass().getResource("/homePage/home.fxml"));
+        Stage appStage = (Stage) enterButton.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/homePage/home.fxml"));
         Scene scene=new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
         appStage.setScene(scene);
         appStage.show();

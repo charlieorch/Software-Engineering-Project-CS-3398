@@ -46,7 +46,7 @@
                         </ImageView>
                      </children>
                   </HBox>
-                  <Button fx:id="fileChooserButton" mnemonicParsing="false" onAction="#fileChooserPress" text="Upload Schedule" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                  <Button fx:id="fileChooserButton" mnemonicParsing="false" onAction="#accountPageButton" text="Upload Schedule" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
                </children>
             </GridPane>
          </bottom>
