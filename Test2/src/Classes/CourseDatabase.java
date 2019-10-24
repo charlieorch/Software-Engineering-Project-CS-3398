@@ -8,26 +8,26 @@ public class CourseDatabase {
      * Stores all courses being offered
      */
 
-    private List<Course> courseListing;
+    private List<Course2> courseListing;
 
     public CourseDatabase() {
-        courseListing = new ArrayList<Course>();
+        courseListing = new ArrayList<Course2>();
     }
 
-    public void addNewCourse(Course c) {
+    public void addNewCourse(Course2 c) {
 
         if(!this.courseExists(c))
             courseListing.add(c);
     }
 
-    public void removeCourse(Course c) {
+    public void removeCourse(Course2 c) {
         int index = this.getCourseIndex(c);
 
         if(index != -1)
             courseListing.remove(index);
     }
 
-    private int getCourseIndex(Course c) {
+    private int getCourseIndex(Course2 c) {
         int index = -1;
 
         for(int i = 0; i < courseListing.size(); i++) {
@@ -38,9 +38,9 @@ public class CourseDatabase {
         return index;
     }
 
-    public boolean courseExists(Course c) {
+    public boolean courseExists(Course2 c) {
 
-        for(Course e : courseListing) {
+        for(Course2 e : courseListing) {
             if(e.sameCourse(c))
                 return true;
         }

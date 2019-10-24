@@ -1,6 +1,6 @@
 package Classes;
 
-public class OpenCourse extends Course{
+public class OpenCourse extends Course2 {
 
     /*
      * -- Needs a currently offered course in order to open an active course --
@@ -25,11 +25,11 @@ public class OpenCourse extends Course{
     String roomNum;
 
 
-    public OpenCourse(Course c, int section) {
+    public OpenCourse(Course2 c, int section) {
         this(c, section, "", "", "");
     }
 
-    public OpenCourse(Course c, int section, String professor, String classTime, String roomNum) {
+    public OpenCourse(Course2 c, int section, String professor, String classTime, String roomNum) {
         this.courseDeptId = c.courseDeptId;
         this.courseDept = c.courseDept;
         this.courseName = c.courseName;

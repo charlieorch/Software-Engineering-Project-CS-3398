@@ -1,5 +1,7 @@
 package homePage;
 
+import com.jaunt.NotFound;
+import com.jaunt.ResponseException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,9 +11,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import options.OptionsPageController;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -22,10 +26,32 @@ public class HomePageController implements Initializable {
     @FXML
     public Label loginButton;
     public Button exitButton;
+    public Button fileChooserButton;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+    }
+
+    public void fileChooserPress(ActionEvent actionEvent) throws IOException, NotFound, ResponseException {
+
+
+        Stage appStage;
+        Parent root;
+        appStage=(Stage) fileChooserButton.getScene().getWindow();
+
+
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Open Class Schedule File");
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("HTML", "*.html"));
+        File htmlFile = fileChooser.showOpenDialog(appStage);
+
+        Main.student.generateStudent(htmlFile);
+
+        root= FXMLLoader.load(getClass().getResource("/account/accountPage.fxml"));
+        Scene scene = new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
+        appStage.setScene(scene);
+        appStage.show();
     }
 
     @FXML

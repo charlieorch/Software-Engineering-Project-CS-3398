@@ -1,6 +1,6 @@
 package Classes;
 
-public class Course {
+public class Course2 {
 
     /*
      * Identifier for the course offered in specific department
@@ -23,15 +23,15 @@ public class Course {
      */
     protected String courseDescription;
 
-    public Course() {
+    public Course2() {
         super();
     }
 
-    public Course(String courseDept, int courseDeptId) {
+    public Course2(String courseDept, int courseDeptId) {
         this(courseDept, courseDeptId, "" , "");
     }
 
-    public Course(String courseDept, int courseDeptId, String courseName, String courseDescription) {
+    public Course2(String courseDept, int courseDeptId, String courseName, String courseDescription) {
         this.courseDept = courseDept;
         this.courseDeptId = courseDeptId;
         this.courseName = courseName;
@@ -58,7 +58,7 @@ public class Course {
      * Checks to see if deptName and deptId are the same = it's the same course
      * true if the same course, false if not
      */
-    public boolean sameCourse(Course c) {
+    public boolean sameCourse(Course2 c) {
         if(this.courseDept.equals(c.getCourseDept()) && this.courseDeptId == c.courseDeptId)
             return true;
 

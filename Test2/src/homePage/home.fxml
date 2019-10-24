@@ -18,6 +18,7 @@
             <GridPane>
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="844.0" minWidth="10.0" prefWidth="601.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="844.0" minWidth="10.0" prefWidth="601.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="605.0" minWidth="10.0" prefWidth="599.0" />
                </columnConstraints>
                <rowConstraints>
@@ -36,7 +37,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
                      <children>
                         <ImageView fitHeight="33.0" fitWidth="35.0" onMouseClicked="#optionsButtonPress" pickOnBounds="true" preserveRatio="true" translateX="-10.0">
                            <image>
@@ -45,6 +46,7 @@
                         </ImageView>
                      </children>
                   </HBox>
+                  <Button fx:id="fileChooserButton" mnemonicParsing="false" onAction="#fileChooserPress" text="Upload Schedule" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
                </children>
             </GridPane>
          </bottom>

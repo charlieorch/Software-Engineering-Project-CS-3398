@@ -4,7 +4,7 @@ import Classes.*;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Student {
+public class Student2 {
 
     /*
         Student id, unique to each student
@@ -22,11 +22,11 @@ public class Student {
      */
     //List<Course> completedCourses;
 
-    public Student(int studentId) {
+    public Student2(int studentId) {
         this(studentId, "");
     }
 
-    public Student(int studentId, String studentName) {
+    public Student2(int studentId, String studentName) {
         this.studentId = studentId;
         this.studentName = studentName;
         courseList = new ArrayList<OpenCourse>();
