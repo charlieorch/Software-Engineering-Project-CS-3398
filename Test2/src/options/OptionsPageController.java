@@ -29,12 +29,16 @@ public class OptionsPageController implements Initializable {
     public static boolean FULLSCREEN = false;
     public static boolean NOTIFICATIONS = true;
     public static boolean KEEPMELOGGEDIN = true;
+    public static int TIMEBEFORECLASSSTART = 30;
+    public static int TIMEBEFORECLASSEND = 10;
 
     public double defaultPrefWith = 900;
     public double defaultPrefHeight = 600;
     public boolean defaultFullscreen = false;
     public boolean defaultNotifications = true;
     public boolean defaultKeepMeLoggedIn = true;
+    public int defaultTimeBeforeClassStart = 30;
+    public int defaultTimeBeforeClassEnd = 10;
 
     @FXML
     public Button backButton;
@@ -79,6 +83,8 @@ public class OptionsPageController implements Initializable {
         printWriter.println(FULLSCREEN);
         printWriter.println(NOTIFICATIONS);
         printWriter.println(KEEPMELOGGEDIN);
+        printWriter.println(TIMEBEFORECLASSSTART);
+        printWriter.println(TIMEBEFORECLASSEND);
         if(KEEPMELOGGEDIN && Main.student != null)
             printWriter.println(Main.student.firstName + "_" + Main.student.lastName);
         printWriter.close();
@@ -107,6 +113,18 @@ public class OptionsPageController implements Initializable {
             appStage.setFullScreen(true);
 
         appStage.show();
+    }
+
+    public void revertToDefaultSettings() throws IOException {
+        PREF_WITH = defaultPrefWith;
+        PREF_HEIGHT = defaultPrefHeight;
+        FULLSCREEN = defaultFullscreen;
+        NOTIFICATIONS = defaultNotifications;
+        KEEPMELOGGEDIN = defaultKeepMeLoggedIn;
+        TIMEBEFORECLASSSTART = defaultTimeBeforeClassStart;
+        TIMEBEFORECLASSEND = defaultTimeBeforeClassEnd;
+
+        saveButtonPress(new ActionEvent());
     }
 
     public static void displayNotification(String text){

@@ -4,14 +4,21 @@ import com.jaunt.*;
 import com.jaunt.component.Table;
 import homePage.HomePageController;
 import homePage.Main;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import options.OptionsPageController;
+import org.controlsfx.control.Notifications;
+import org.controlsfx.control.action.Action;
 
 import java.io.*;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 public class Student implements Serializable{
     public String firstName;
@@ -23,6 +30,52 @@ public class Student implements Serializable{
         Main.student = new Student();
         Main.student.generateStudent(file);
         Main.student.saveStudentData();
+        Main.student.startNotifications();
+    }
+
+    public void startNotifications(){
+        Thread thread = new Thread(new Runnable() {
+            private void postMessage(final String message) {
+                Platform.runLater(() -> Notifications.create().title("Course Reminder").text(message).hideCloseButton().darkStyle().show());
+            }
+            @Override
+            public void run() {
+                while(Main.student != null){
+                    if(OptionsPageController.NOTIFICATIONS != false) {
+                        LocalTime now = LocalTime.now();
+                        for(Course course: schedule.courses){
+
+                            String start = course.startTime.split(" ")[0] + " " + course.startTime.split(" ")[1].toUpperCase();
+                            if(start.split(":")[0].length() == 1)
+                                start = "0" + start;
+
+                            String end = course.endTime.split(" ")[0] + " " + course.endTime.split(" ")[1].toUpperCase();
+                            if(end.split(":")[0].length() == 1)
+                                end = "0" + end;
+
+                            LocalTime classStart = LocalTime.parse(start, DateTimeFormatter.ofPattern("hh:mm a"));
+                            LocalTime classEnd = LocalTime.parse(end, DateTimeFormatter.ofPattern("hh:mm a"));
+
+                            if(now.isAfter(classStart) && now.isBefore(classEnd))
+                                course.inSession = true;
+                            else
+                                course.inSession = false;
+
+                            if(ChronoUnit.MINUTES.between(now, classStart) == OptionsPageController.TIMEBEFORECLASSSTART) {
+                                postMessage("\n             " + course.name + " Starts In " + OptionsPageController.TIMEBEFORECLASSSTART + " Minutes!");
+                                try { Thread.sleep(60000); } catch (InterruptedException e) { e.printStackTrace();}
+                            }
+                            else if(ChronoUnit.MINUTES.between(now, classEnd) == OptionsPageController.TIMEBEFORECLASSEND) {
+                                postMessage("\n             " + course.name + " Ends In " + OptionsPageController.TIMEBEFORECLASSSTART + " Minutes!");
+                                try { Thread.sleep(60000); } catch (InterruptedException e) { e.printStackTrace();}
+                            }
+                        }
+                    }
+                    try { Thread.sleep(1000); } catch (InterruptedException e) { e.printStackTrace();}
+                }
+            }
+        });
+        thread.start();
     }
 
     public void saveStudentData() throws IOException {

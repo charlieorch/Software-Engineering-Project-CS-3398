@@ -43,6 +43,8 @@ public class Main extends Application {
             OptionsPageController.FULLSCREEN = Boolean.valueOf(reader.readLine());
             OptionsPageController.NOTIFICATIONS = Boolean.valueOf(reader.readLine());
             OptionsPageController.KEEPMELOGGEDIN = Boolean.valueOf(reader.readLine());
+            OptionsPageController.TIMEBEFORECLASSSTART = Integer.valueOf(reader.readLine());
+            OptionsPageController.TIMEBEFORECLASSEND = Integer.valueOf(reader.readLine());
 
             String lastLogin;
             if(OptionsPageController.KEEPMELOGGEDIN && (lastLogin = reader.readLine()) != null){
@@ -55,7 +57,8 @@ public class Main extends Application {
                         in.close();
                         file.close();
 
-                        System.out.println(Main.student.firstName);
+                        Main.student.startNotifications();
+
                     }catch(ClassNotFoundException ex){
                         System.out.println("No Student File Found");
                     }
@@ -65,6 +68,7 @@ public class Main extends Application {
             System.out.println("No options file found");
         }
     }
+
 
     public static void main(String[] args) {
         launch(args);

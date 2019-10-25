@@ -17,4 +17,5 @@ public class Course implements Serializable {
     public String startTime;
     public String endTime;
     public String days;
+    public boolean inSession;
 }

@@ -35,13 +35,7 @@ public class AccountPageController implements Initializable {
     @FXML
     public void logout(ActionEvent actionEvent) throws IOException {
         Main.student = null;
-
-        Stage appStage = (Stage) titleLabel.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/account/accountPage.fxml"));
-
-        Scene scene = new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
-        appStage.setScene(scene);
-        appStage.show();
+        accountBack(new ActionEvent());
     }
 
     public void accountBack(ActionEvent actionEvent) throws IOException {
