@@ -14,7 +14,9 @@ import javafx.stage.Stage;
 import options.OptionsPageController;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -44,5 +46,17 @@ public class AccountPageController implements Initializable {
         Scene scene = new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
         appStage.setScene(scene);
         appStage.show();
+    }
+
+    public static void saveData() throws IOException {
+        FileWriter fileWriter = new FileWriter("account.txt");
+        PrintWriter printWriter = new PrintWriter(fileWriter);
+        //printWriter.println(name);
+        //printWriter.println(ID);
+        //printWriter.println(hours);
+        //printWriter.println(major);
+        //printWriter.println(minor);
+        //printWriter.println(classes);
+        printWriter.close();
     }
 }

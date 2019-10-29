@@ -9,7 +9,9 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import options.OptionsPageController;
 
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 public class StudentController {
 
@@ -24,5 +26,13 @@ public class StudentController {
         Scene scene=new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
         appStage.setScene(scene);
         appStage.show();
+    }
+
+    public static void saveData() throws IOException {
+        FileWriter fileWriter = new FileWriter("student.txt");
+        PrintWriter printWriter = new PrintWriter(fileWriter);
+        //printWriter.println(ID);
+        //printWriter.println(courses);
+        printWriter.close();
     }
 }

@@ -10,7 +10,9 @@ import javafx.stage.Stage;
 import options.OptionsPageController;
 
 import javax.xml.namespace.QName;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 public class GradeController {
 
@@ -25,5 +27,12 @@ public class GradeController {
         Scene scene=new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
         appStage.setScene(scene);
         appStage.show();
+    }
+
+    public static void saveData() throws IOException {
+        FileWriter fileWriter = new FileWriter("Grade.txt");
+        PrintWriter printWriter = new PrintWriter(fileWriter);
+        //printWriter.println(Grade);
+        printWriter.close();
     }
 }
