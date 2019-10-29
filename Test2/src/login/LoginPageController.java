@@ -10,7 +10,9 @@ import javafx.stage.Stage;
 import options.OptionsPageController;
 
 import javax.xml.namespace.QName;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 public class LoginPageController {
 
@@ -20,20 +22,16 @@ public class LoginPageController {
     public Button exitButton;
 
     public void enterHomepage(ActionEvent actionEvent) throws IOException {
-        Stage appStage;
-        Parent root;
-        appStage=(Stage) enterButton.getScene().getWindow();
-        root= FXMLLoader.load(getClass().getResource("/homePage/home.fxml"));
-        Scene scene=new Scene(root);
+        Stage appStage = (Stage) enterButton.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/homePage/home.fxml"));
+        Scene scene=new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
         appStage.setScene(scene);
         appStage.show();
     }
 
     public void loginBack(ActionEvent actionEvent) throws IOException {
-        Stage appStage;
-        Parent root;
-        appStage=(Stage) backButton.getScene().getWindow();
-        root= FXMLLoader.load(getClass().getResource("/homePage/home.fxml"));
+        Stage appStage = (Stage) enterButton.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/homePage/home.fxml"));
         Scene scene=new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
         appStage.setScene(scene);
         appStage.show();
@@ -42,5 +40,13 @@ public class LoginPageController {
     public void handleExitButtonAction(ActionEvent event) {
         Stage stage = (Stage) exitButton.getScene().getWindow();
         stage.close();
+    }
+
+    public static void saveData() throws IOException {
+        FileWriter fileWriter = new FileWriter("login.txt");
+        PrintWriter printWriter = new PrintWriter(fileWriter);
+        //printWriter.println(user);
+        //printWriter.println(password);
+        printWriter.close();
     }
 }
