@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dining.DiningController">
+   <children>
+      <BorderPane prefHeight="374.0" prefWidth="146.0">
+         <top>
+            <AnchorPane prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #501214;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" layoutX="260.0" layoutY="7.0" prefHeight="70.0" prefWidth="368.0" text="Dining" textAlignment="JUSTIFY" textFill="WHITE" textOverrun="WORD_ELLIPSIS" wrapText="true">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="backButton" alignment="TOP_LEFT" layoutX="-14.0" layoutY="-16.0" mnemonicParsing="false" onAction="#loginBack" style="-fx-background-color: #501214;" text="Back" textFill="WHITE" AnchorPane.leftAnchor="-14.0">
+                     <font>
+                        <Font size="28.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+         </top>
+         <right>
+            <AnchorPane prefHeight="523.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+         </right>
+         <left>
+            <Label alignment="CENTER" contentDisplay="BOTTOM" prefHeight="533.0" prefWidth="448.0" text="Meal Swipe Counter" textAlignment="CENTER" BorderPane.alignment="TOP_CENTER">
+               <graphic>
+                  <TextField alignment="CENTER" text="90" />
+               </graphic>
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Label>
+         </left>
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label contentDisplay="CENTER" layoutX="35.0" layoutY="115.0" prefHeight="59.0" prefWidth="383.0" text="Dining Dollars Remaining" textAlignment="CENTER">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="dollarStartingAmount" alignment="CENTER" layoutX="50.0" layoutY="183.0" prefHeight="48.0" prefWidth="224.0" promptText="Input Starting Amount">
+                     <font>
+                        <Font size="19.0" />
+                     </font></TextField>
+                  <Button layoutX="281.0" layoutY="184.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="103.0" text="Enter" />
+                  <TextField fx:id="dollarAddOrSubtract" alignment="CENTER" layoutX="50.0" layoutY="248.0" prefHeight="48.0" prefWidth="224.0" promptText="Input Amount Lost or Added">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="addButton" layoutX="280.0" layoutY="249.0" mnemonicParsing="false" onAction="#addDiningDollars" prefHeight="47.0" prefWidth="52.0" text="Add">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="subtractButton" layoutX="334.0" layoutY="249.0" mnemonicParsing="false" onAction="#subtractDiningDollars" prefHeight="47.0" prefWidth="52.0" text="Sub">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="dollarResult" alignment="CENTER" layoutX="50.0" layoutY="316.0" prefHeight="48.0" prefWidth="335.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

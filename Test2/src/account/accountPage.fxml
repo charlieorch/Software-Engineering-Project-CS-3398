@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane prefHeight="770.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="account.AccountPageController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <AnchorPane prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #501214;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="backButton" layoutX="22.0" layoutY="15.0" mnemonicParsing="false" onAction="#accountBack" prefHeight="27.0" prefWidth="46.0" text="Back" />
+                  <Label fx:id="titleLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="305.0" prefHeight="60.0" prefWidth="600.0" text="Account Information" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <bottom>
+            <Button mnemonicParsing="false" onAction="#logout" text="Logout" BorderPane.alignment="BOTTOM_LEFT" />
+         </bottom>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="221.0" layoutY="209.0" text="Student:" />
+                  <Label layoutX="233.0" layoutY="252.0" text="ID: " />
+                  <Label layoutX="225.0" layoutY="300.0" text="Hours:" />
+                  <TextField layoutX="294.0" layoutY="204.0" />
+                  <TextField layoutX="295.0" layoutY="248.0" />
+                  <TextField layoutX="297.0" layoutY="295.0" />
+                  <Label layoutX="805.0" layoutY="31.0" text="Classes:" />
+                  <ListView layoutX="574.0" layoutY="75.0" prefHeight="571.0" prefWidth="518.0" />
+                  <Label layoutX="223.0" layoutY="347.0" text="Major:" />
+                  <Label layoutX="225.0" layoutY="396.0" text="Minor:" />
+                  <TextField layoutX="294.0" layoutY="342.0" />
+                  <TextField layoutX="294.0" layoutY="385.0" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>
