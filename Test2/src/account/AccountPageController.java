@@ -10,6 +10,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import options.OptionsPageController;
 
@@ -22,6 +24,8 @@ public class AccountPageController implements Initializable {
 
     @FXML
     public Label titleLabel;
+    public VBox vBoxMain1;
+    public VBox vBoxMain2;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -30,6 +34,38 @@ public class AccountPageController implements Initializable {
                 + Main.student.id + " Hours: " + Main.student.schedule.creditHours);
         else
             titleLabel.setText("No User");
+
+        String cssLayout = "-fx-border-color: black;\n" +
+                "-fx-border-insets: 5;\n" +
+                "-fx-border-width: 3;\n" +
+                "-fx-border-style: solid;\n";
+
+        vBoxMain1.setSpacing(30);
+        //vBoxMain1.setStyle(cssLayout);
+        vBoxMain2.setSpacing(30);
+        //vBoxMain2.setStyle(cssLayout);
+
+        int i = 0;
+        for(Course course: Main.student.schedule.courses) {
+
+            VBox vBox = new VBox();
+            vBox.setStyle(cssLayout);
+
+            vBox.getChildren().add(new Label("Course: " + course.name + " - " + course.courseNumber));
+            vBox.getChildren().add(new Label("Type: " + course.type));
+            vBox.getChildren().add(new Label("Subject: " + course.subject));
+            vBox.getChildren().add(new Label("Section: " + course.section));
+            vBox.getChildren().add(new Label("Professor: " + course.professor));
+            vBox.getChildren().add(new Label("Professor Email: " + course.professorEmail));
+            vBox.getChildren().add(new Label("Building: " + course.building + " " + course.room));
+            vBox.getChildren().add(new Label("Time: " + course.startTime + " - " + course.endTime));
+
+            if(i<=2)
+                vBoxMain1.getChildren().add(vBox);
+            else
+                vBoxMain2.getChildren().add(vBox);
+            i++;
+        }
     }
 
     @FXML

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -13,17 +14,26 @@
          <top>
             <HBox alignment="CENTER" prefHeight="55.0" prefWidth="1219.0" style="-fx-background-color: #501214;">
                <children>
-                  <Button fx:id="backButton" mnemonicParsing="false" onAction="#accountBack" prefHeight="39.0" prefWidth="91.0" text="Back" />
-                  <Label fx:id="titleLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="114.0" prefWidth="1142.0" text="Account Information" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                  <Button fx:id="backButton" mnemonicParsing="false" onAction="#accountBack" prefHeight="39.0" prefWidth="85.0" text="Back" />
+                  <Label fx:id="titleLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="55.0" prefWidth="999.0" text="Account Information" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
                      <font>
                         <Font size="38.0" />
                      </font>
                   </Label>
+                  <Button mnemonicParsing="false" onAction="#logout" prefHeight="39.0" prefWidth="101.0" text="Logout" />
                </children>
             </HBox>
          </top>
          <center>
-            <Button mnemonicParsing="false" onAction="#logout" text="Logout" BorderPane.alignment="CENTER" />
+            <HBox>
+               <children>
+                  <VBox fx:id="vBoxMain1" prefHeight="715.0" prefWidth="571.0" BorderPane.alignment="CENTER" />
+                  <VBox fx:id="vBoxMain2" prefHeight="715.0" prefWidth="620.0" />
+               </children>
+               <padding>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </HBox>
          </center>
       </BorderPane>
    </children>
