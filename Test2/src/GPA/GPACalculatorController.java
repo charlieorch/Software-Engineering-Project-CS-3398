@@ -139,9 +139,6 @@ public class GPACalculatorController {
         tC = (2 * ((4 * cc4)/(3 * cc3)/(2 * cc2)/(cc1)));
         tD = (1 * ((4 * cd4)/(3 * cd3)/(2 * cd2)/(cd1)));
 
-        System.out.println(tA);
-        System.out.println(ca2);
-
         score = tA + tB + tC + tD;
 
         GPA = score / gtotal;
