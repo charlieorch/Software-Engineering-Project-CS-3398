@@ -66,11 +66,11 @@
       <Label layoutX="94.0" layoutY="281.0" text="9" />
       <Label layoutX="94.0" layoutY="308.0" text="10" />
       <Button fx:id="backButton" layoutX="527.0" layoutY="19.0" mnemonicParsing="false" onAction="#gradeBack" text="Back" />
-      <TextArea fx:id="calcResults" layoutX="366.0" layoutY="233.0" prefHeight="97.0" prefWidth="200.0" />
       <Label layoutX="394.0" layoutY="214.0" text="Calculation Results">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
+      <TextField fx:id="calcResults" layoutX="378.0" layoutY="251.0" />
    </children>
 </AnchorPane>
