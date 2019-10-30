@@ -48,7 +48,7 @@
             <TextField fx:id="gradeNine" GridPane.rowIndex="8" />
             <TextField fx:id="percentNine" GridPane.columnIndex="1" GridPane.rowIndex="8" />
             <TextField fx:id="gradeTen" GridPane.rowIndex="9" />
-            <TextField fx:id="PercentTen" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <TextField fx:id="percentTen" GridPane.columnIndex="1" GridPane.rowIndex="9" />
          </children>
       </GridPane>
       <Label layoutX="155.0" layoutY="14.0" text="Grade" />
