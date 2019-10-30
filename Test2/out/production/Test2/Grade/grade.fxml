@@ -71,6 +71,9 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
+<<<<<<< HEAD
       <TextField fx:id="calcResults" layoutX="378.0" layoutY="268.0" />
+=======
+>>>>>>> c2e139e13da46847ea107fcf9d51b00a32d1b05d
    </children>
 </AnchorPane>
