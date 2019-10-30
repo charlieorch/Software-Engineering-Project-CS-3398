@@ -47,24 +47,27 @@
                         <Font size="33.0" />
                      </font>
                   </Label>
-                  <TextField alignment="CENTER" layoutX="50.0" layoutY="183.0" prefHeight="48.0" prefWidth="224.0" promptText="Input Starting Amount" />
+                  <TextField fx:id="dollarStartingAmount" alignment="CENTER" layoutX="50.0" layoutY="183.0" prefHeight="48.0" prefWidth="224.0" promptText="Input Starting Amount">
+                     <font>
+                        <Font size="19.0" />
+                     </font></TextField>
                   <Button layoutX="281.0" layoutY="184.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="103.0" text="Enter" />
-                  <TextField alignment="CENTER" layoutX="50.0" layoutY="248.0" prefHeight="48.0" prefWidth="224.0" promptText="Input Amount Lost or Added">
+                  <TextField fx:id="dollarAddOrSubtract" alignment="CENTER" layoutX="50.0" layoutY="248.0" prefHeight="48.0" prefWidth="224.0" promptText="Input Amount Lost or Added">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </TextField>
-                  <Button layoutX="280.0" layoutY="249.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="52.0" text="Add">
+                  <Button fx:id="addButton" layoutX="280.0" layoutY="249.0" mnemonicParsing="false" onAction="#addDiningDollars" prefHeight="47.0" prefWidth="52.0" text="Add">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Button>
-                  <Button layoutX="334.0" layoutY="249.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="52.0" text="Sub">
+                  <Button fx:id="subtractButton" layoutX="334.0" layoutY="249.0" mnemonicParsing="false" onAction="#subtractDiningDollars" prefHeight="47.0" prefWidth="52.0" text="Sub">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Button>
-                  <TextField alignment="CENTER" layoutX="50.0" layoutY="316.0" prefHeight="48.0" prefWidth="335.0">
+                  <TextField fx:id="dollarResult" alignment="CENTER" layoutX="50.0" layoutY="316.0" prefHeight="48.0" prefWidth="335.0">
                      <font>
                         <Font size="16.0" />
                      </font>
