@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import options.OptionsPageController;
@@ -129,8 +130,9 @@ public class GradeController {
 
         double total;
 
-        total = ((grade1 * percent1) + (grade2 * percent2) + (grade3 * percent3) + (grade4 * percent4) + (grade5 * percent5) + (grade6 * percent6) + (grade7 * percent7) + (grade8 * percent8) + (grade9 * percent9) + (grade10 + percent10)) / 100;
+        total = ((grade1 * percent1 + grade2 * percent2 + grade3 * percent3 + grade4 * percent4 + grade5 * percent5 + grade6 * percent6 + grade7 * percent7 + grade8 * percent8 + grade9 * percent9 + grade10 + percent10) / 100);
         String calcTotal = Double.toString(total);
         calcResults.setText(calcTotal);
+
     }
 }

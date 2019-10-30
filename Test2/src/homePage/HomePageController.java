@@ -93,7 +93,7 @@ public class HomePageController implements Initializable {
         appStage.setScene(scene);
         appStage.show();
     }
-
+    /*
     @FXML
     public void gradeButtonPressed(MouseEvent actionEvent) throws IOException {
         Stage appStage = (Stage) loginButton.getScene().getWindow();
@@ -102,7 +102,7 @@ public class HomePageController implements Initializable {
         Scene scene = new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
         appStage.setScene(scene);
         appStage.show();
-    }
+    }*/
 
     @FXML
     public void handleExitButtonAction(ActionEvent event) {

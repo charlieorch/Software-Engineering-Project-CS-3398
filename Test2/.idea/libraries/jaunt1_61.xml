@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="jaunt1.61">
+    <CLASSES>
+      <root url="file://$USER_HOME$/Downloads/jaunt1.6.0" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$USER_HOME$/Downloads/jaunt1.6.0/javadocs" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$USER_HOME$/Downloads/jaunt1.6.0/examples" />
+      <root url="file://$USER_HOME$/Downloads/jaunt1.6.0/examples_extra" />
+      <root url="file://$USER_HOME$/Downloads/jaunt1.6.0/examples_json" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Downloads/jaunt1.6.0" recursive="false" />
+  </library>
+</component>
