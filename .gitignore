@@ -89,3 +89,6 @@ Test2/.idea/libraries/controlsfx_11_0_0.xml
 Test2/out/production/Test2/Grade/GradeController.class
 Test2/out/production/Test2/GPA/GPACalculatorController.class
 Test2/out/production/Test2/GPA/GPACalculatorController.class
+Test2/Test2.iml
+Test2/out/production/Test2/Grade/grade.fxml
+Test2/.idea/workspace.xml
