@@ -14,13 +14,35 @@
          <top>
             <HBox alignment="CENTER" prefHeight="55.0" prefWidth="1219.0" style="-fx-background-color: #501214;">
                <children>
-                  <Button fx:id="backButton" mnemonicParsing="false" onAction="#accountBack" prefHeight="39.0" prefWidth="85.0" text="Back" />
-                  <Label fx:id="titleLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="55.0" prefWidth="999.0" text="Account Information" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                  <HBox alignment="CENTER" prefHeight="55.0" prefWidth="65.0">
+                     <children>
+                        <Button fx:id="backButton" alignment="CENTER" contentDisplay="CENTER" minWidth="-Infinity" mnemonicParsing="false" onAction="#accountBack" text="Back">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </HBox>
+                  <Label fx:id="titleLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="55.0" prefWidth="994.0" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" HBox.hgrow="NEVER">
                      <font>
                         <Font size="38.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" onAction="#logout" prefHeight="39.0" prefWidth="101.0" text="Logout" />
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Button contentDisplay="CENTER" minWidth="-Infinity" mnemonicParsing="false" onAction="#logout" text="Logout" HBox.hgrow="NEVER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                  </HBox>
                </children>
             </HBox>
          </top>
@@ -31,7 +53,7 @@
                   <VBox fx:id="vBoxMain2" prefHeight="715.0" prefWidth="620.0" />
                </children>
                <padding>
-                  <Insets left="20.0" right="20.0" top="20.0" />
+                  <Insets left="10.0" right="10.0" top="10.0" />
                </padding>
             </HBox>
          </center>

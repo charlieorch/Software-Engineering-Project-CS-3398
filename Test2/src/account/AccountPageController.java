@@ -30,8 +30,7 @@ public class AccountPageController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         if(Main.student != null)
-            titleLabel.setText("Student: " + Main.student.firstName + " " + Main.student.lastName + " ID: "
-                + Main.student.id + " Hours: " + Main.student.schedule.creditHours);
+            titleLabel.setText("Student: " + Main.student.firstName + " " + Main.student.lastName);
         else
             titleLabel.setText("No User");
 
