@@ -29,31 +29,31 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <TextField />
-            <TextField GridPane.rowIndex="1" />
-            <TextField GridPane.rowIndex="2" />
-            <TextField GridPane.columnIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField GridPane.rowIndex="3" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField GridPane.rowIndex="4" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <TextField GridPane.rowIndex="5" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <TextField GridPane.rowIndex="6" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <TextField GridPane.rowIndex="7" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="7" />
-            <TextField GridPane.rowIndex="8" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="8" />
-            <TextField GridPane.rowIndex="9" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <TextField fx:id="gradeOne" />
+            <TextField fx:id="gradeTwo" GridPane.rowIndex="1" />
+            <TextField fx:id="gradeThree" GridPane.rowIndex="2" />
+            <TextField fx:id="percentOne" GridPane.columnIndex="1" />
+            <TextField fx:id="percentTwo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="percentThree" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="gradeFour" GridPane.rowIndex="3" />
+            <TextField fx:id="percentFour" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="gradeFive" GridPane.rowIndex="4" />
+            <TextField fx:id="percentFive" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="gradeSix" GridPane.rowIndex="5" />
+            <TextField fx:id="percentSix" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="gradeSeven" GridPane.rowIndex="6" />
+            <TextField fx:id="percentSeven" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="gradeEight" GridPane.rowIndex="7" />
+            <TextField fx:id="percentEight" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="gradeNine" GridPane.rowIndex="8" />
+            <TextField fx:id="percentNine" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField fx:id="gradeTen" GridPane.rowIndex="9" />
+            <TextField fx:id="percentTen" GridPane.columnIndex="1" GridPane.rowIndex="9" />
          </children>
       </GridPane>
       <Label layoutX="155.0" layoutY="14.0" text="Grade" />
       <Label layoutX="246.0" layoutY="14.0" text="Percentage" />
-      <Button layoutX="193.0" layoutY="350.0" mnemonicParsing="false" text="Compute" />
+      <Button layoutX="193.0" layoutY="350.0" mnemonicParsing="false" onAction="#calculateGrade" text="Compute" />
       <Label layoutX="57.0" layoutY="14.0" prefHeight="17.0" prefWidth="73.0" text="Assignment" />
       <Label layoutX="94.0" layoutY="40.0" text="1" />
       <Label layoutX="94.0" layoutY="69.0" text="2" />
@@ -66,12 +66,11 @@
       <Label layoutX="94.0" layoutY="281.0" text="9" />
       <Label layoutX="94.0" layoutY="308.0" text="10" />
       <Button fx:id="backButton" layoutX="527.0" layoutY="19.0" mnemonicParsing="false" onAction="#gradeBack" text="Back" />
-      <TextArea layoutX="366.0" layoutY="233.0" prefHeight="97.0" prefWidth="200.0" />
       <Label layoutX="394.0" layoutY="214.0" text="Calculation Results">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Button layoutX="409.0" layoutY="337.0" mnemonicParsing="false" text="Calculate Again" />
+      <TextField fx:id="calcResults" layoutX="378.0" layoutY="251.0" />
    </children>
 </AnchorPane>

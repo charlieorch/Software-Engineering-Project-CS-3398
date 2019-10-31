@@ -10,7 +10,9 @@ import javafx.stage.Stage;
 import options.OptionsPageController;
 
 import javax.xml.namespace.QName;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 public class LoginPageController {
 
@@ -38,5 +40,13 @@ public class LoginPageController {
     public void handleExitButtonAction(ActionEvent event) {
         Stage stage = (Stage) exitButton.getScene().getWindow();
         stage.close();
+    }
+
+    public static void saveData() throws IOException {
+        FileWriter fileWriter = new FileWriter("login.txt");
+        PrintWriter printWriter = new PrintWriter(fileWriter);
+        //printWriter.println(user);
+        //printWriter.println(password);
+        printWriter.close();
     }
 }

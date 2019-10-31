@@ -10,7 +10,7 @@ public class Student2 {
         Student id, unique to each student
      */
     private int studentId;
-    String studentName;
+    String studentName = "Josh Peck";
 
     /*
      * List for currently active courses
