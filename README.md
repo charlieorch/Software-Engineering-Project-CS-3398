@@ -51,7 +51,7 @@ Sprint 1
 * Mesut - My next step is to implement code on the interface so it actually works.
 
 Sprint 2
-* Erik -
+* Erik -  My next step is to make a create account and login page that will implement the HTML parser that I wrote for this sprint.
 * Charlie - My next step is to refine and/or fix the Dining interface to work with the implemented database.
 * Sam - My next step is to refine the GPA algorithm to work with all cases and fully implement the save local data functions.  
 * Mesut -
@@ -66,7 +66,7 @@ Sprint 1
 * Mesut - I did the grade calculator interface and swipe calculator graph . Grade calculator is under the grade file in src. Swipe graph is under dining file in src. Grade calculator serves a purpose to calculate what the students grade will be in a certain graph. Swipe graph is the burn down chart of how many swipes are left as well as daily consumption.
 
 Sprint 2
-* Erik -
+* Erik - I created an interface that allows the user to upload their class schedule to the application allowing them to see all their classes information as well as giving them the option to recieve notifications on their desktop that alert them when a class in about to begin or end. This interface will later be used once a user has created an account and logged into the application. This commit has all the code pertaining to the interface that displays the users schedule: https://github.com/CS3398-Enclave-Boys/CS3398-Enclave-F2019/commit/8e8cec27b9dfa095b98f7042c78e2f82a3cdd280
 * Charlie - I created the interface and functionality for the dining dollars counter as well as added an individual student account to be implemented within the database. The dining dollars counter successfully works and is crucial for the student to add or subtract how many dining dollars they have left on their account. Here is the commit of the code that makes up the functionality of the dining dollars calculation: https://github.com/CS3398-Enclave-Boys/CS3398-Enclave-F2019/commit/c2e139e13da46847ea107fcf9d51b00a32d1b05d
 * Sam - I  created the account interface that should implemented with the student page. This could change on collaboration for the next sprint as the account interface could be transferred to another page. I created a template for saving the data locally for the app and is in each class but has not been fully implemented due to talk about moving things around and which data should be stored and what do not needs to be pulled locally. The GPA calculator algorithm was implemented but needs some tuning so that the calculator works for all cases. This refactoring will most likely take place in the next sprint to make sure this code is working correctly for all cases. Here is a commit for the GPA algorithm: https://github.com/CS3398-Enclave-Boys/CS3398-Enclave-F2019/commit/b23ed2428b75d2c12d8cf364f169ce58b1e13363
 * Mesut -
