@@ -10,18 +10,6 @@
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GPA.GPACalculatorController">
    <children>
       <BorderPane prefHeight="200.0" prefWidth="200.0">
-         <top>
-            <AnchorPane prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #501214;" BorderPane.alignment="CENTER">
-               <children>
-                  <Button fx:id="backButton" layoutX="21.0" layoutY="17.0" mnemonicParsing="false" onAction="#gpaBack" text="Back" />
-                  <Label layoutX="362.0" layoutY="11.0" text="GPA Calculator" textFill="WHITE">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-         </top>
          <center>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
@@ -129,7 +117,7 @@
                      <font>
                         <Font size="30.0" />
                      </font></Label>
-                  <TextField fx:id="total" layoutX="361.0" layoutY="18.0" prefHeight="32.0" prefWidth="265.0" />
+                  <TextField fx:id="total" layoutX="385.0" layoutY="15.0" prefHeight="39.0" prefWidth="53.0" />
                   <TextField fx:id="a44" layoutX="446.0" layoutY="112.0" prefHeight="27.0" prefWidth="45.0" />
                   <TextField fx:id="calcResults" layoutX="205.0" layoutY="445.0" prefHeight="43.0" prefWidth="188.0" />
                   <TextField fx:id="b34" layoutX="447.0" layoutY="170.0" prefHeight="27.0" prefWidth="45.0" />
@@ -151,10 +139,22 @@
                   <TextField layoutX="800.0" layoutY="173.0" prefHeight="27.0" prefWidth="45.0" />
                   <TextField layoutX="799.0" layoutY="231.0" prefHeight="27.0" prefWidth="45.0" />
                   <TextField layoutX="800.0" layoutY="285.0" prefHeight="27.0" prefWidth="45.0" />
-                  <Button layoutX="420.0" layoutY="437.0" mnemonicParsing="false" onAction="#gradeCalculate" prefHeight="59.0" prefWidth="125.0" text="Calculate" />
+                  <Button fx:id="calcButton" layoutX="420.0" layoutY="437.0" mnemonicParsing="false" onAction="#gradeCalculate" prefHeight="59.0" prefWidth="125.0" text="Calculate" />
                </children>
             </AnchorPane>
          </center>
+         <top>
+            <AnchorPane prefHeight="52.0" prefWidth="600.0" style="-fx-background-color: #501214;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="314.0" prefHeight="53.0" prefWidth="273.0" text="GPA Calculator" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="backButton" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#gpaBack" text="Back" />
+               </children>
+            </AnchorPane>
+         </top>
       </BorderPane>
    </children>
 </StackPane>

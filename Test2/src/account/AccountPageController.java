@@ -21,7 +21,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class AccountPageController implements Initializable {
-
     @FXML
     public Label titleLabel;
     public VBox vBoxMain1;
@@ -36,17 +35,14 @@ public class AccountPageController implements Initializable {
 
         String cssLayout = "-fx-border-color: black;\n" +
                 "-fx-border-insets: 5;\n" +
-                "-fx-border-width: 3;\n" +
+                "-fx-border-width: 2;\n" +
                 "-fx-border-style: solid;\n";
 
         vBoxMain1.setSpacing(30);
-        //vBoxMain1.setStyle(cssLayout);
         vBoxMain2.setSpacing(30);
-        //vBoxMain2.setStyle(cssLayout);
 
         int i = 0;
         for(Course course: Main.student.schedule.courses) {
-
             VBox vBox = new VBox();
             vBox.setStyle(cssLayout);
 
@@ -67,7 +63,6 @@ public class AccountPageController implements Initializable {
         }
     }
 
-    @FXML
     public void logout(ActionEvent actionEvent) throws IOException {
         Main.student = null;
         accountBack(new ActionEvent());

@@ -22,10 +22,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class HomePageController implements Initializable {
-
     @FXML
     public Label loginButton;
-    public Button exitButton;
     public Button fileChooserButton;
 
     @Override
@@ -44,6 +42,8 @@ public class HomePageController implements Initializable {
             fileChooser.setTitle("Open Class Schedule File");
             fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("HTML", "*.html"));
             File htmlFile = fileChooser.showOpenDialog(appStage);
+            if(htmlFile == null)
+                return;
             Student.createNewStudent(htmlFile);
         }
 
@@ -105,15 +105,9 @@ public class HomePageController implements Initializable {
     }
 
     @FXML
-    public void handleExitButtonAction(ActionEvent event) {
-        Stage stage = (Stage) exitButton.getScene().getWindow();
-        stage.close();
-    }
-
-    @FXML
     public void diningButtonPress(MouseEvent actionEvent) throws IOException {
         Stage appStage = (Stage) loginButton.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/Dining/dining.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/Dining/diningCounter.fxml"));
 
         Scene scene = new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
         appStage.setScene(scene);

@@ -43,6 +43,9 @@
                            <image>
                               <Image url="@../img/settingsIcon.png" />
                            </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </ImageView>
                      </children>
                   </HBox>
@@ -51,18 +54,13 @@
             </GridPane>
          </bottom>
          <top>
-            <HBox alignment="CENTER" prefHeight="55.0" prefWidth="1219.0" style="-fx-background-color: #501214;" BorderPane.alignment="CENTER">
+            <HBox alignment="CENTER" prefHeight="52.0" prefWidth="1200.0" style="-fx-background-color: #501214;" BorderPane.alignment="CENTER">
                <children>
-                  <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="114.0" prefWidth="1142.0" text="        Texas State Desktop Application" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="52.0" prefWidth="1142.0" text="Texas State Desktop Application" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
                      <font>
-                        <Font size="38.0" />
+                        <Font size="36.0" />
                      </font>
                   </Label>
-                  <Button fx:id="exitButton" mnemonicParsing="false" onAction="#handleExitButtonAction" prefHeight="8.0" prefWidth="26.0" style="-fx-background-color: #501214;" text="X" textFill="WHITE">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </Button>
                </children>
             </HBox>
          </top>
@@ -96,7 +94,7 @@
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="211.0" layoutY="107.0" onMouseClicked="#studentButtonPress" text="Student" textOverrun="CLIP" GridPane.rowIndex="1">
+                        <Label layoutX="211.0" layoutY="107.0" onMouseClicked="#studentButtonPress" text="Student Details" textOverrun="CLIP" GridPane.rowIndex="1">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -112,7 +110,7 @@
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="825.0" layoutY="330.0" onMouseClicked="#classesButtonPress" text="Classes" textOverrun="CLIP" GridPane.rowIndex="2">
+                        <Label layoutX="825.0" layoutY="330.0" onMouseClicked="#classesButtonPress" text="Classes For Majors" textOverrun="CLIP" GridPane.rowIndex="2">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -120,7 +118,7 @@
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="211.0" layoutY="107.0" onMouseClicked="#diningButtonPress" text="Dining" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <Label layoutX="211.0" layoutY="107.0" onMouseClicked="#diningButtonPress" text="Dining Counter" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>

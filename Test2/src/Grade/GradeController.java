@@ -16,27 +16,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class GradeController {
-
     @FXML
     public Button backButton;
-
-    public void gradeBack(ActionEvent actionEvent) throws IOException {
-        Stage appStage;
-        Parent root;
-        appStage=(Stage) backButton.getScene().getWindow();
-        root= FXMLLoader.load(getClass().getResource("/homePage/home.fxml"));
-        Scene scene=new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
-        appStage.setScene(scene);
-        appStage.show();
-    }
-
-    public static void saveData() throws IOException {
-        FileWriter fileWriter = new FileWriter("Grade.txt");
-        PrintWriter printWriter = new PrintWriter(fileWriter);
-        //printWriter.println(Grade);
-        printWriter.close();
-    }
-
     @FXML
     private TextField calcResults;
     @FXML
@@ -59,7 +40,6 @@ public class GradeController {
     private TextField gradeNine;
     @FXML
     private TextField gradeTen;
-
     @FXML
     private TextField percentOne;
     @FXML
@@ -80,6 +60,23 @@ public class GradeController {
     private TextField percentNine;
     @FXML
     private TextField percentTen;
+
+    public void gradeBack(ActionEvent actionEvent) throws IOException {
+        Stage appStage;
+        Parent root;
+        appStage=(Stage) backButton.getScene().getWindow();
+        root= FXMLLoader.load(getClass().getResource("/homePage/home.fxml"));
+        Scene scene=new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
+        appStage.setScene(scene);
+        appStage.show();
+    }
+
+    public static void saveData() throws IOException {
+        FileWriter fileWriter = new FileWriter("Grade.txt");
+        PrintWriter printWriter = new PrintWriter(fileWriter);
+        //printWriter.println(Grade);
+        printWriter.close();
+    }
 
     @FXML
     private void calculateGrade(ActionEvent event){

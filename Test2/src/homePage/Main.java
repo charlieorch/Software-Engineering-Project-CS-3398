@@ -26,14 +26,14 @@ public class Main extends Application {
         primaryStage.getIcons().add(new Image("/img/icon.png"));
         primaryStage.setScene(new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT));
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+
             public void handle(WindowEvent we) {
                 try {
                     OptionsPageController.saveData();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
+                    Main.student = null;
+                } catch (IOException e) {e.printStackTrace(); }
+            }});
+
         primaryStage.show();
     }
 
@@ -45,6 +45,7 @@ public class Main extends Application {
             OptionsPageController.KEEPMELOGGEDIN = Boolean.valueOf(reader.readLine());
             OptionsPageController.TIMEBEFORECLASSSTART = Integer.valueOf(reader.readLine());
             OptionsPageController.TIMEBEFORECLASSEND = Integer.valueOf(reader.readLine());
+            OptionsPageController.PLAYNOTIFICATIONSOUND = Boolean.parseBoolean(reader.readLine());
 
             String lastLogin;
             if(OptionsPageController.KEEPMELOGGEDIN && (lastLogin = reader.readLine()) != null){
@@ -59,16 +60,11 @@ public class Main extends Application {
 
                         Main.student.startNotifications();
 
-                    }catch(ClassNotFoundException ex){
-                        System.out.println("No Student File Found");
-                    }
+                    }catch(ClassNotFoundException ex){ System.out.println("No Student File Found"); }
             }
             reader.close();
-            }catch (IOException e){
-            System.out.println("No options file found");
-        }
+            }catch (IOException e){ System.out.println("No options file found"); }
     }
-
 
     public static void main(String[] args) {
         launch(args);

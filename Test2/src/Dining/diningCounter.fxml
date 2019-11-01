@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -11,34 +10,6 @@
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dining.DiningController">
    <children>
       <BorderPane prefHeight="374.0" prefWidth="146.0">
-         <top>
-            <AnchorPane prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #501214;" BorderPane.alignment="CENTER">
-               <children>
-                  <Label alignment="CENTER" layoutX="260.0" layoutY="7.0" prefHeight="70.0" prefWidth="368.0" text="Dining" textAlignment="JUSTIFY" textFill="WHITE" textOverrun="WORD_ELLIPSIS" wrapText="true">
-                     <font>
-                        <Font size="48.0" />
-                     </font>
-                  </Label>
-                  <Button fx:id="backButton" alignment="TOP_LEFT" layoutX="-14.0" layoutY="-16.0" mnemonicParsing="false" onAction="#loginBack" style="-fx-background-color: #501214;" text="Back" textFill="WHITE" AnchorPane.leftAnchor="-14.0">
-                     <font>
-                        <Font size="28.0" />
-                     </font></Button>
-               </children>
-            </AnchorPane>
-         </top>
-         <right>
-            <AnchorPane prefHeight="523.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
-         </right>
-         <left>
-            <Label alignment="CENTER" contentDisplay="BOTTOM" prefHeight="533.0" prefWidth="448.0" text="Meal Swipe Counter" textAlignment="CENTER" BorderPane.alignment="TOP_CENTER">
-               <graphic>
-                  <TextField alignment="CENTER" text="90" />
-               </graphic>
-               <font>
-                  <Font size="33.0" />
-               </font>
-            </Label>
-         </left>
          <center>
             <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
@@ -50,7 +21,8 @@
                   <TextField fx:id="dollarStartingAmount" alignment="CENTER" layoutX="50.0" layoutY="183.0" prefHeight="48.0" prefWidth="224.0" promptText="Input Starting Amount">
                      <font>
                         <Font size="19.0" />
-                     </font></TextField>
+                     </font>
+                  </TextField>
                   <Button layoutX="281.0" layoutY="184.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="103.0" text="Enter" />
                   <TextField fx:id="dollarAddOrSubtract" alignment="CENTER" layoutX="50.0" layoutY="248.0" prefHeight="48.0" prefWidth="224.0" promptText="Input Amount Lost or Added">
                      <font>
@@ -75,6 +47,31 @@
                </children>
             </Pane>
          </center>
+         <left>
+            <Label alignment="CENTER" contentDisplay="BOTTOM" prefHeight="533.0" prefWidth="448.0" text="Meal Swipe Counter" textAlignment="CENTER" BorderPane.alignment="TOP_CENTER">
+               <font>
+                  <Font size="33.0" />
+               </font>
+               <graphic>
+                  <TextField alignment="CENTER" text="90" />
+               </graphic>
+            </Label>
+         </left>
+         <right>
+            <AnchorPane prefHeight="523.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+         </right>
+         <top>
+            <AnchorPane prefHeight="52.0" prefWidth="600.0" style="-fx-background-color: #501214;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label contentDisplay="CENTER" layoutX="314.0" prefHeight="53.0" prefWidth="273.0" text="Dining Counter" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="backButton" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#loginBack" text="Back" />
+               </children>
+            </AnchorPane>
+         </top>
       </BorderPane>
    </children>
 </StackPane>

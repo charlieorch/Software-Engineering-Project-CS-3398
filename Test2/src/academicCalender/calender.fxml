@@ -12,14 +12,14 @@
    <children>
       <BorderPane prefHeight="200.0" prefWidth="200.0">
          <top>
-            <AnchorPane prefHeight="52.0" prefWidth="600.0" style="-fx-background-color: #501214;" BorderPane.alignment="CENTER">
+            <AnchorPane maxHeight="-Infinity" prefHeight="52.0" prefWidth="600.0" style="-fx-background-color: #501214;" BorderPane.alignment="CENTER">
                <children>
                   <Label contentDisplay="CENTER" layoutX="292.0" prefHeight="53.0" prefWidth="316.0" text="Academic Calendar" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
                      <font>
                         <Font size="36.0" />
                      </font>
                   </Label>
-                  <Button fx:id="backButton" layoutX="14.0" layoutY="7.0" mnemonicParsing="false" onAction="#backButtonPress" onMouseClicked="#backButtonPress" text="Back" />
+                  <Button fx:id="backButton" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#backButtonPress" onMouseClicked="#backButtonPress" text="Back" />
                </children>
             </AnchorPane>
          </top>

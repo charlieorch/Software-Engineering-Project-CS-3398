@@ -41,7 +41,7 @@ public class DiningController {
     public Button subtractButton;
 
     @FXML
-    private void addDiningDollars(ActionEvent event){
+    public void addDiningDollars(ActionEvent event){
         String startingAmount = dollarStartingAmount.getText();
         String addAmount = dollarAddOrSubtract.getText();
 

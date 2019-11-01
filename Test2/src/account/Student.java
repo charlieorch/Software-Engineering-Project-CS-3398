@@ -13,6 +13,7 @@ import options.OptionsPageController;
 import org.controlsfx.control.Notifications;
 import org.controlsfx.control.action.Action;
 
+import java.awt.*;
 import java.io.*;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
@@ -38,7 +39,6 @@ public class Student implements Serializable{
             private void postMessage(final String message) {
                 Platform.runLater(() -> Notifications.create().title("Course Reminder").text(message).hideCloseButton().darkStyle().show());
             }
-            @Override
             public void run() {
                 while(Main.student != null){
                     if(OptionsPageController.NOTIFICATIONS != false) {
@@ -63,10 +63,14 @@ public class Student implements Serializable{
 
                             if(ChronoUnit.MINUTES.between(now, classStart) == OptionsPageController.TIMEBEFORECLASSSTART) {
                                 postMessage("\n             " + course.name + " Starts In " + OptionsPageController.TIMEBEFORECLASSSTART + " Minutes!");
+                                if(OptionsPageController.PLAYNOTIFICATIONSOUND)
+                                    Toolkit.getDefaultToolkit().beep();
                                 try { Thread.sleep(60000); } catch (InterruptedException e) { e.printStackTrace();}
                             }
                             else if(ChronoUnit.MINUTES.between(now, classEnd) == OptionsPageController.TIMEBEFORECLASSEND) {
-                                postMessage("\n             " + course.name + " Ends In " + OptionsPageController.TIMEBEFORECLASSSTART + " Minutes!");
+                                postMessage("\n             " + course.name + " Ends In " + OptionsPageController.TIMEBEFORECLASSEND + " Minutes!");
+                                if(OptionsPageController.PLAYNOTIFICATIONSOUND)
+                                    Toolkit.getDefaultToolkit().beep();
                                 try { Thread.sleep(60000); } catch (InterruptedException e) { e.printStackTrace();}
                             }
                         }

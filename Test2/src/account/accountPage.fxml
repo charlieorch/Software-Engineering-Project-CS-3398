@@ -12,7 +12,7 @@
    <children>
       <BorderPane prefHeight="200.0" prefWidth="200.0">
          <top>
-            <HBox alignment="CENTER" prefHeight="55.0" prefWidth="1219.0" style="-fx-background-color: #501214;">
+            <HBox alignment="CENTER" fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="53.0" prefWidth="1200.0" style="-fx-background-color: #501214;">
                <children>
                   <HBox alignment="CENTER" prefHeight="55.0" prefWidth="65.0">
                      <children>
@@ -26,9 +26,9 @@
                         <Insets left="20.0" />
                      </padding>
                   </HBox>
-                  <Label fx:id="titleLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="55.0" prefWidth="994.0" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" HBox.hgrow="NEVER">
+                  <Label fx:id="titleLabel" alignment="CENTER" contentDisplay="CENTER" prefWidth="994.0" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" HBox.hgrow="NEVER">
                      <font>
-                        <Font size="38.0" />
+                        <Font size="36.0" />
                      </font>
                   </Label>
                   <HBox alignment="CENTER">

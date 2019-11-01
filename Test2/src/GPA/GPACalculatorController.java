@@ -16,6 +16,46 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class GPACalculatorController {
+    @FXML
+    public Button backButton;
+    @FXML
+    public Button calcButton;
+    @FXML
+    private TextField total;
+    @FXML
+    private TextField a44;
+    @FXML
+    private TextField a43;
+    @FXML
+    private TextField a42;
+    @FXML
+    private TextField a41;
+    @FXML
+    private TextField b34;
+    @FXML
+    private TextField b33;
+    @FXML
+    private TextField b32;
+    @FXML
+    private TextField b31;
+    @FXML
+    private TextField c24;
+    @FXML
+    private TextField c23;
+    @FXML
+    private TextField c22;
+    @FXML
+    private TextField c21;
+    @FXML
+    private TextField d14;
+    @FXML
+    private TextField d13;
+    @FXML
+    private TextField d12;
+    @FXML
+    private TextField d11;
+    @FXML
+    private TextField calcResults;
 
     public static void saveData() throws IOException {
         FileWriter fileWriter = new FileWriter("GPA.txt");
@@ -23,9 +63,6 @@ public class GPACalculatorController {
         //printWriter.println(GPA);
         printWriter.close();
     }
-
-    @FXML
-    public Button backButton;
 
     public void gpaBack(ActionEvent actionEvent) throws IOException {
         Stage appStage;
@@ -38,64 +75,7 @@ public class GPACalculatorController {
     }
 
     @FXML
-    public Button calcButton;
-
-    @FXML
-    private TextField total;
-
-    @FXML
-    private TextField a44;
-
-    @FXML
-    private TextField a43;
-
-    @FXML
-    private TextField a42;
-
-    @FXML
-    private TextField a41;
-
-    @FXML
-    private TextField b34;
-
-    @FXML
-    private TextField b33;
-
-    @FXML
-    private TextField b32;
-
-    @FXML
-    private TextField b31;
-
-    @FXML
-    private TextField c24;
-
-    @FXML
-    private TextField c23;
-
-    @FXML
-    private TextField c22;
-
-    @FXML
-    private TextField c21;
-
-    @FXML
-    private TextField d14;
-
-    @FXML
-    private TextField d13;
-
-    @FXML
-    private TextField d12;
-
-    @FXML
-    private TextField d11;
-
-    @FXML
-    private TextField calcResults;
-
-    @FXML
-    private void gradeCalculate(ActionEvent event){
+    public void gradeCalculate(ActionEvent event){
         String totalG = total.getText();
         String a4 = a44.getText();
         String a3 = a43.getText();
@@ -146,6 +126,4 @@ public class GPACalculatorController {
         String totalCalculated = Double.toString(GPA);
         calcResults.setText(totalCalculated);
     }
-
-
 }
