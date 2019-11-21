@@ -28,10 +28,17 @@ public class HomePageController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        if(Main.student == null)
-            fileChooserButton.setText("Upload Class Schedule");
-        else
+        if(Main.student == null) {
+            fileChooserButton.setVisible(false);
+            fileChooserButton.setDisable(true);
+            loginButton.setText("Login");
+        }
+        else {
+            fileChooserButton.setVisible(true);
+            fileChooserButton.setDisable(false);
             fileChooserButton.setText("Student: " + Main.student.firstName);
+            loginButton.setText("Logout");
+        }
     }
 
     public void accountPageButton(ActionEvent actionEvent) throws IOException, NotFound, ResponseException {
@@ -57,11 +64,20 @@ public class HomePageController implements Initializable {
     @FXML
     public void loginButtonPress(MouseEvent actionEvent) throws IOException {
         Stage appStage = (Stage) loginButton.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/login/login.fxml"));
 
-        Scene scene = new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
-        appStage.setScene(scene);
-        appStage.show();
+        if(Main.student == null) {
+            Parent root = FXMLLoader.load(getClass().getResource("/login/login.fxml"));
+            Scene scene = new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
+            appStage.setScene(scene);
+            appStage.show();
+        }
+        else{
+            Main.student = null;
+            Parent root = FXMLLoader.load(getClass().getResource("/homePage/home.fxml"));
+            Scene scene = new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
+            appStage.setScene(scene);
+            appStage.show();
+        }
     }
 
     @FXML
