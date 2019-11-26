@@ -91,9 +91,9 @@ public class HomePageController implements Initializable {
     }
 
     @FXML
-    public void AcademicCalenderPress(MouseEvent actionEvent) throws IOException {
+    public void SchoolResourcePress(MouseEvent actionEvent) throws IOException {
         Stage appStage = (Stage) loginButton.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/academicCalender/calender.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/resources/resources.fxml"));
 
         Scene scene = new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
         appStage.setScene(scene);

@@ -78,7 +78,7 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label onMouseClicked="#AcademicCalenderPress" text="Academic Calender" textOverrun="CLIP">
+                        <Label onMouseClicked="#SchoolResourcePress" text="School Resources" textOverrun="CLIP">
                            <font>
                               <Font size="24.0" />
                            </font>

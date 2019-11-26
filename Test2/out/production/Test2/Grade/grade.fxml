@@ -75,6 +75,11 @@
                      </font>
                   </Label>
                   <TextField fx:id="calcResults" layoutX="162.0" layoutY="430.0" prefHeight="39.0" prefWidth="150.0" />
+                  <TextArea layoutX="530.0" layoutY="369.0" prefHeight="102.0" prefWidth="317.0" text="Don't let one bad grade define your abilities. &#10;It's a minor setback. &#10;How you choose to overcome it, &#10;is what sets you apart from the rest.">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </TextArea>
                </children>
             </AnchorPane>
          </center>
