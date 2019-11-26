@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.media.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
@@ -23,18 +26,20 @@
                     </children>
                 </AnchorPane>
             </top>
-            <center>
-                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-                    <children>
-                        <ImageView fitHeight="547.0" fitWidth="727.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../img/AcademicCalendar.png" />
-                            </image>
-                        </ImageView>
-                    </children>
-                </HBox>
-            </center>
+         <center>
+            <ScrollPane pannable="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <content>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/campus_map_resize.png" />
+                     </image>
+                     <rotationAxis>
+                        <Point3D />
+                     </rotationAxis>
+                  </ImageView>
+               </content>
+            </ScrollPane>
+         </center>
         </BorderPane>
     </children>
 </StackPane>
-

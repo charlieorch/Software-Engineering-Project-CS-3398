@@ -8,8 +8,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import options.OptionsPageController;
-
 import java.io.IOException;
+
 
 public class SchoolMap {
 
@@ -19,10 +19,12 @@ public class SchoolMap {
     public void pageBack(ActionEvent actionEvent) throws IOException {
         Stage appStage;
         Parent root;
-        appStage=(Stage) backButton.getScene().getWindow();
-        root= FXMLLoader.load(getClass().getResource("/homePage/home.fxml"));
-        Scene scene=new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
+        appStage = (Stage) backButton.getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource("/homePage/home.fxml"));
+        Scene scene = new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
         appStage.setScene(scene);
         appStage.show();
     }
+
 }
+
