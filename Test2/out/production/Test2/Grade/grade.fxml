@@ -55,9 +55,9 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                   </GridPane>
-                  <Label layoutX="223.0" layoutY="85.0" text="Grade" />
-                  <Label layoutX="314.0" layoutY="85.0" text="Percentage" />
-                  <Button layoutX="310.0" layoutY="436.0" mnemonicParsing="false" onAction="#calculateGrade" text="Compute" />
+                  <Label layoutX="210.0" layoutY="85.0" text="Grade ( 0 - 100)" />
+                  <Label layoutX="298.0" layoutY="85.0" text="Percentage (0 - 100)" />
+                  <Button layoutX="329.0" layoutY="436.0" mnemonicParsing="false" onAction="#calculateGrade" text="Calculate" />
                   <Label layoutX="125.0" layoutY="85.0" prefHeight="17.0" prefWidth="73.0" text="Assignment" />
                   <Label layoutX="162.0" layoutY="111.0" text="1" />
                   <Label layoutX="162.0" layoutY="140.0" text="2" />
@@ -69,17 +69,17 @@
                   <Label layoutX="162.0" layoutY="327.0" text="8" />
                   <Label layoutX="162.0" layoutY="352.0" text="9" />
                   <Label layoutX="162.0" layoutY="379.0" text="10" />
-                  <Label layoutX="537.0" layoutY="205.0" text="Calculation Results">
+                  <Label layoutX="173.0" layoutY="410.0" text="Calculation Results">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="calcResults" layoutX="537.0" layoutY="244.0" prefHeight="39.0" prefWidth="150.0" />
+                  <TextField fx:id="calcResults" layoutX="162.0" layoutY="430.0" prefHeight="39.0" prefWidth="150.0" />
                </children>
             </AnchorPane>
          </center>
          <top>
-            <AnchorPane prefHeight="52.0" prefWidth="600.0" style="-fx-background-color: #501214;" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="63.0" prefWidth="900.0" style="-fx-background-color: #501214;" BorderPane.alignment="CENTER">
                <children>
                   <Label contentDisplay="CENTER" layoutX="314.0" prefHeight="53.0" prefWidth="273.0" text="Grade Calculator" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
                      <font>

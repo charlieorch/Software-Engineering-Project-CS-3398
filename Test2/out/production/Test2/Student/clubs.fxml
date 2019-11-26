@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Student.ClubsController">
+   <children>
+      <HBox alignment="CENTER" layoutX="-1.0" layoutY="-1.0" prefHeight="41.0" prefWidth="602.0" style="-fx-background-color: #501214;">
+         <children>
+            <Label text="Clubs" textFill="#e1dddd">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+         </children></HBox>
+   </children>
+</AnchorPane>
