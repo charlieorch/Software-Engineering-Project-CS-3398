@@ -74,7 +74,27 @@ public class GradeController {
     public static void saveData() throws IOException {
         FileWriter fileWriter = new FileWriter("Grade.txt");
         PrintWriter printWriter = new PrintWriter(fileWriter);
-        //printWriter.println(Grade);
+        /*printWriter.println(gradeOne);
+        printWriter.println(gradeTwo);
+        printWriter.println(gradeThree);
+        printWriter.println(gradeFour);
+        printWriter.println(gradeFive);
+        printWriter.println(gradeSix);
+        printWriter.println(gradeSeven);
+        printWriter.println(gradeEight);
+        printWriter.println(gradeNine);
+        printWriter.println(gradeTen);
+        printWriter.println(percentOne);
+        printWriter.println(percentTwo);
+        printWriter.println(percentThree);
+        printWriter.println(percentFour);
+        printWriter.println(percentFive);
+        printWriter.println(percentSix);
+        printWriter.println(percentSeven);
+        printWriter.println(percentEight);
+        printWriter.println(percentNine);
+        printWriter.println(percentTen);*/
+
         printWriter.close();
     }
 
