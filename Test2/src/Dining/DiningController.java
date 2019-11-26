@@ -1,5 +1,7 @@
 package Dining;
 
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.text.DecimalFormat;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -68,5 +70,15 @@ public class DiningController {
         total = starting - subtract;
         String resultTotal = Double.toString(total);
         dollarResult.setText(resultTotal);
+    }
+
+    public static void saveData() throws IOException {
+        FileWriter fileWriter = new FileWriter("Dining.txt");
+        PrintWriter printWriter = new PrintWriter(fileWriter);
+        /*printWriter.println(dollarStartingAmount);
+        printWriter.println(dollarAddOrSubtract);
+        printWriter.println(dollarResult);*/
+
+        printWriter.close();
     }
 }
