@@ -149,5 +149,7 @@ public class GradeController {
         total = ((grade1 * percent1) + (grade2 * percent2) + (grade3 * percent3) + (grade4 * percent4) + (grade5 * percent5) + (grade6 * percent6) + (grade7 * percent7) + (grade8 * percent8) + (grade9 * percent9) + (grade10 + percent10)) / 100;
         String calcTotal = Double.toString(total);
         calcResults.setText(calcTotal);
+
+        //saveData();
     }
 }
