@@ -3,11 +3,17 @@ package Dining;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.text.DecimalFormat;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.LineChart;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -75,6 +81,17 @@ public class DiningController {
 
         //saveData();
     }
+
+    @FXML
+    public LineChart chart;
+
+    @FXML
+    private void handleButtonAction (ActionEvent event) {
+        String starting_amt = dollarStartingAmount.getText();
+        double starting = Double.parseDouble(starting_amt);
+
+    }
+
 
     public static void saveData() throws IOException {
         FileWriter fileWriter = new FileWriter("Dining.txt");
