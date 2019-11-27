@@ -74,7 +74,27 @@ public class GradeController {
     public static void saveData() throws IOException {
         FileWriter fileWriter = new FileWriter("Grade.txt");
         PrintWriter printWriter = new PrintWriter(fileWriter);
-        //printWriter.println(Grade);
+        /*printWriter.println(gradeOne);
+        printWriter.println(gradeTwo);
+        printWriter.println(gradeThree);
+        printWriter.println(gradeFour);
+        printWriter.println(gradeFive);
+        printWriter.println(gradeSix);
+        printWriter.println(gradeSeven);
+        printWriter.println(gradeEight);
+        printWriter.println(gradeNine);
+        printWriter.println(gradeTen);
+        printWriter.println(percentOne);
+        printWriter.println(percentTwo);
+        printWriter.println(percentThree);
+        printWriter.println(percentFour);
+        printWriter.println(percentFive);
+        printWriter.println(percentSix);
+        printWriter.println(percentSeven);
+        printWriter.println(percentEight);
+        printWriter.println(percentNine);
+        printWriter.println(percentTen);*/
+
         printWriter.close();
     }
 
@@ -91,6 +111,42 @@ public class GradeController {
         String gNine = gradeNine.getText();
         String gTen = gradeTen.getText();
 
+        if(gOne.trim().isEmpty()){
+            gOne = "0";
+        }
+        if(gTwo.trim().isEmpty()){
+            gTwo = "0";
+        }
+        if(gThree.trim().isEmpty()){
+            gThree = "0";
+        }
+        if(gThree.trim().isEmpty()){
+            gThree = "0";
+        }
+        if(gFour.trim().isEmpty()){
+            gFour = "0";
+        }
+        if(gFive.trim().isEmpty()){
+            gFive = "0";
+        }
+        if(gSix.trim().isEmpty()){
+            gSix = "0";
+        }
+        if(gSeven.trim().isEmpty()){
+            gSeven = "0";
+        }
+        if(gEight.trim().isEmpty()){
+            gEight = "0";
+        }
+        if(gNine.trim().isEmpty()){
+            gNine = "0";
+        }
+        if(gTen.trim().isEmpty()){
+            gTen = "0";
+        }
+
+
+
         String pOne = percentOne.getText();
         String pTwo = percentTwo.getText();
         String pThree = percentThree.getText();
@@ -101,6 +157,40 @@ public class GradeController {
         String pEight = percentEight.getText();
         String pNine = percentNine.getText();
         String pTen = percentTen.getText();
+
+        if(pOne.trim().isEmpty()){
+            pOne = "0";
+        }
+        if(pTwo.trim().isEmpty()){
+            pTwo = "0";
+        }
+        if(pThree.trim().isEmpty()){
+            pThree = "0";
+        }
+        if(pThree.trim().isEmpty()){
+            pThree = "0";
+        }
+        if(pFour.trim().isEmpty()){
+            pFour = "0";
+        }
+        if(pFive.trim().isEmpty()){
+            pFive = "0";
+        }
+        if(pSix.trim().isEmpty()){
+            pSix = "0";
+        }
+        if(pSeven.trim().isEmpty()){
+            pSeven = "0";
+        }
+        if(pEight.trim().isEmpty()){
+            pEight = "0";
+        }
+        if(pNine.trim().isEmpty()){
+            pNine = "0";
+        }
+        if(pTen.trim().isEmpty()){
+            pTen = "0";
+        }
 
         double grade1 = Double.parseDouble(gOne);
         double grade2 = Double.parseDouble(gTwo);
@@ -124,10 +214,13 @@ public class GradeController {
         double percent9 = Double.parseDouble(pNine);
         double percent10 = Double.parseDouble(pTen);
 
-        double total;
 
-        total = ((grade1 * percent1) + (grade2 * percent2) + (grade3 * percent3) + (grade4 * percent4) + (grade5 * percent5) + (grade6 * percent6) + (grade7 * percent7) + (grade8 * percent8) + (grade9 * percent9) + (grade10 + percent10)) / 100;
+        double total = 0;
+
+        total = ((grade1 * percent1)/100) + ((grade2 * percent2)/100) + ((grade3 * percent3)/100) + ((grade4 * percent4)/100) + ((grade5 * percent5)/100) + ((grade6 * percent6)/100) + ((grade7 * percent7)/100) + ((grade8 * percent8)/100) + ((grade9 * percent9)/100) + ((grade10 * percent10)/100);
         String calcTotal = Double.toString(total);
         calcResults.setText(calcTotal);
+
+        //saveData();
     }
 }

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resources.SchoolMap">
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="200.0">
+            <top>
+                <AnchorPane maxHeight="-Infinity" prefHeight="52.0" prefWidth="600.0" style="-fx-background-color: #501214;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label contentDisplay="CENTER" layoutX="292.0" prefHeight="53.0" prefWidth="316.0" text="Campus Map" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                            <font>
+                                <Font size="36.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="backButton" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#pageBack" onMouseClicked="#pageBack" text="Back" />
+                    </children>
+                </AnchorPane>
+            </top>
+         <center>
+            <ScrollPane pannable="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <content>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/campus_map_resize.png" />
+                     </image>
+                     <rotationAxis>
+                        <Point3D />
+                     </rotationAxis>
+                  </ImageView>
+               </content>
+            </ScrollPane>
+         </center>
+        </BorderPane>
+    </children>
+</StackPane>
