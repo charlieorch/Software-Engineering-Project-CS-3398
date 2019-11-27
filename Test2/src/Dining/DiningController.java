@@ -55,6 +55,8 @@ public class DiningController {
         total = starting + add;
         String resultTotal = Double.toString(total);
         dollarResult.setText(resultTotal);
+
+        //saveData();
     }
 
     @FXML
@@ -70,6 +72,8 @@ public class DiningController {
         total = starting - subtract;
         String resultTotal = Double.toString(total);
         dollarResult.setText(resultTotal);
+
+        //saveData();
     }
 
     public static void saveData() throws IOException {

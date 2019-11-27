@@ -220,5 +220,7 @@ public class GradeController {
         total = ((grade1 * percent1)/100) + ((grade2 * percent2)/100) + ((grade3 * percent3)/100) + ((grade4 * percent4)/100) + ((grade5 * percent5)/100) + ((grade6 * percent6)/100) + ((grade7 * percent7)/100) + ((grade8 * percent8)/100) + ((grade9 * percent9)/100) + ((grade10 * percent10)/100);
         String calcTotal = Double.toString(total);
         calcResults.setText(calcTotal);
+
+        //saveData();
     }
 }
