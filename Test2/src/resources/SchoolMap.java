@@ -20,7 +20,7 @@ public class SchoolMap {
         Stage appStage;
         Parent root;
         appStage = (Stage) backButton.getScene().getWindow();
-        root = FXMLLoader.load(getClass().getResource("/homePage/home.fxml"));
+        root = FXMLLoader.load(getClass().getResource("/resources/resources.fxml"));
         Scene scene = new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
         appStage.setScene(scene);
         appStage.show();
