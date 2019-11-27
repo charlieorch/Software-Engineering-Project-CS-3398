@@ -37,6 +37,7 @@
                   <TextField layoutX="136.0" layoutY="171.0" prefHeight="100.0" prefWidth="161.0" />
                   <Label layoutX="391.0" layoutY="42.0" text="Classes Needed For Major" />
                   <ListView layoutX="363.0" layoutY="70.0" prefHeight="200.0" prefWidth="200.0" />
+                  <Button fx:id="clubButton" layoutX="530.0" layoutY="298.0" mnemonicParsing="false" onAction="#goToClubs" text="Clubs" textAlignment="CENTER" />
                </children>
             </AnchorPane>
          </center>

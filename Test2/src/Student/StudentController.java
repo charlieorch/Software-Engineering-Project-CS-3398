@@ -17,12 +17,23 @@ public class StudentController {
 
     @FXML
     public Button backButton;
+    public Button clubButton;
 
     public void studentBack(ActionEvent actionEvent) throws IOException {
         Stage appStage;
         Parent root;
         appStage=(Stage) backButton.getScene().getWindow();
         root= FXMLLoader.load(getClass().getResource("/homePage/home.fxml"));
+        Scene scene=new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
+        appStage.setScene(scene);
+        appStage.show();
+    }
+
+    public void goToClubs(ActionEvent actionEvent) throws IOException {
+        Stage appStage;
+        Parent root;
+        appStage=(Stage) clubButton.getScene().getWindow();
+        root= FXMLLoader.load(getClass().getResource("/Student/clubs.fxml"));
         Scene scene=new Scene(root, OptionsPageController.PREF_WITH, OptionsPageController.PREF_HEIGHT);
         appStage.setScene(scene);
         appStage.show();
