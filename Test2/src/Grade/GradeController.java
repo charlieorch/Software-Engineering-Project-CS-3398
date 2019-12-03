@@ -68,6 +68,7 @@ public class GradeController implements Initializable {
     @FXML
     private AnchorPane pane;
 
+
     public void gradeBack(ActionEvent actionEvent)  throws IOException {
         Stage appStage;
         Parent root;

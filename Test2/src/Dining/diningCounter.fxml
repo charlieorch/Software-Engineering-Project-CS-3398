@@ -54,7 +54,7 @@
                   <Font size="33.0" />
                </font>
                <graphic>
-                  <TextField alignment="CENTER" text="90" />
+                  <TextField fx:id="swipeCounter" alignment="CENTER" text="90" />
                </graphic>
             </Label>
          </left>

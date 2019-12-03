@@ -1,7 +1,7 @@
 package Dining;
 
-import java.io.FileWriter;
-import java.io.PrintWriter;
+import java.io.*;
+import java.net.URL;
 import java.text.DecimalFormat;
 
 import javafx.collections.FXCollections;
@@ -9,6 +9,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.LineChart;
@@ -19,15 +20,18 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import options.OptionsPageController;
 
-import java.io.IOException;
+import java.util.ResourceBundle;
 
-public class DiningController {
+public class DiningController implements Initializable {
 
     @FXML
     public Button backButton;
+    @FXML
+    private TextField swipeCounter;
 
     @FXML
     public void loginBack(ActionEvent actionEvent) throws IOException {
+        saveData();
         Stage appStage;
         Parent root;
         appStage=(Stage) backButton.getScene().getWindow();
@@ -92,14 +96,28 @@ public class DiningController {
 
     }
 
-
-    public static void saveData() throws IOException {
+    public  void saveData() throws IOException {
         FileWriter fileWriter = new FileWriter("Dining.txt");
         PrintWriter printWriter = new PrintWriter(fileWriter);
-        /*printWriter.println(dollarStartingAmount);
-        printWriter.println(dollarAddOrSubtract);
-        printWriter.println(dollarResult);*/
+        printWriter.println(swipeCounter.getText());
+        if(dollarResult.getText().equals(""))
+            printWriter.println(dollarStartingAmount);
+        else
+            printWriter.println(dollarResult.getText());
 
         printWriter.close();
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        if(new File("Dining.txt").exists()) {
+            try {
+                BufferedReader reader = new BufferedReader(new FileReader("Dining.txt"));
+                swipeCounter.setText(reader.readLine());
+                dollarStartingAmount.setText(reader.readLine());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
