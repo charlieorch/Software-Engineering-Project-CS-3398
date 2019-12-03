@@ -133,3 +133,7 @@ Test2/out/production/Test2/img/campus_map.png
 Test2/out/production/Test2/img/campus_map_resize.png
 Test2/out/production/Test2/img/Thumbs.db
 *.db
+Test2/out/production/Test2/login/login.fxml
+Test2/accounts.txt
+Test2/.idea/workspace.xml
+Test2/Test2.iml

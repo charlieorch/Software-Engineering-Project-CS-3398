@@ -26,7 +26,7 @@
                   </Label>
                   <PasswordField fx:id="passwordField" layoutX="408.0" layoutY="242.0" prefHeight="25.0" prefWidth="245.0" />
                   <TextField fx:id="userNameField" layoutX="408.0" layoutY="167.0" prefHeight="25.0" prefWidth="245.0" />
-                  <Button fx:id="loginButton" layoutX="594.0" layoutY="301.0" mnemonicParsing="false" text="Login" textAlignment="CENTER" textFill="#0a0808">
+                  <Button fx:id="loginButton" layoutX="594.0" layoutY="301.0" mnemonicParsing="false" onAction="#login" text="Login" textAlignment="CENTER" textFill="#0a0808">
                      <effect>
                         <Glow level="0.33" />
                      </effect></Button>
