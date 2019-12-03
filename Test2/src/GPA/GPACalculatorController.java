@@ -129,6 +129,67 @@ public class GPACalculatorController {
         String d1 = d11.getText();
         String d0 = d10.getText();
 
+        if(a4.trim().isEmpty()){
+            a4 = "0";
+        }
+        if(a3.trim().isEmpty()){
+            a3 = "0";
+        }
+        if(a2.trim().isEmpty()){
+            a2 = "0";
+        }
+        if(a1.trim().isEmpty()){
+            a1 = "0";
+        }
+        if(a0.trim().isEmpty()){
+            a0 = "0";
+        }
+        if(b4.trim().isEmpty()){
+            b4 = "0";
+        }
+        if(b3.trim().isEmpty()){
+            b3 = "0";
+        }
+        if(b2.trim().isEmpty()){
+            b2 = "0";
+        }
+        if(b1.trim().isEmpty()){
+            b1 = "0";
+        }
+        if(b0.trim().isEmpty()){
+            b0 = "0";
+        }
+        if(c4.trim().isEmpty()){
+            c4 = "0";
+        }
+        if(c3.trim().isEmpty()){
+            c3 = "0";
+        }
+        if(c2.trim().isEmpty()){
+            c2 = "0";
+        }
+        if(c1.trim().isEmpty()){
+            c1 = "0";
+        }
+        if(c0.trim().isEmpty()){
+            c0 = "0";
+        }
+        if(d4.trim().isEmpty()){
+            d4 = "0";
+        }
+        if(d3.trim().isEmpty()){
+            d3 = "0";
+        }
+        if(d2.trim().isEmpty()){
+            d2 = "0";
+        }
+        if(d1.trim().isEmpty()){
+            d1 = "0";
+        }
+        if(d0.trim().isEmpty()){
+            d0 = "0";
+        }
+
         double gtotal = Double.parseDouble(totalG);
         double ca4 = Double.parseDouble(a4);
         double ca3 = Double.parseDouble(a3);
@@ -153,10 +214,93 @@ public class GPACalculatorController {
 
         double score, GPA, tA, tB, tC, tD;
 
-        tA = (4 * ((4 * ca4)/(3 * ca3)/(2 * ca2)/(ca1)));
-        tB = (3 * ((4 * cb4)/(3 * cb3)/(2 * cb2)/(cb1)));
-        tC = (2 * ((4 * cc4)/(3 * cc3)/(2 * cc2)/(cc1)));
-        tD = (1 * ((4 * cd4)/(3 * cd3)/(2 * cd2)/(cd1)));
+        double caa4 = 1, caa3 = 1, caa2 = 1, caaa = 1;
+        double cbb4 = 1, cbb3 = 1, cbb2 = 1, cbbb = 1;
+        double ccc4 = 1, ccc3 = 1, ccc2 = 1, cccc = 1;
+        double cdd4 = 1, cdd3 = 1, cdd2 = 1, cddd = 1;
+
+        if (ca4 == 0)
+            caa4 = 1;
+        else if (ca4 != 0)
+            caa4 = (ca4 * 4);
+        if (ca3 == 0)
+            caa3 = 1;
+        else if (ca3 != 0)
+            caa3 = (ca3 * 3);
+        if (ca2 == 0)
+            caa2 = 1;
+        else if (ca2 != 0)
+            caa2 = (ca2 * 2);
+
+        if (cb4 == 0)
+            cbb4 = 1;
+        else if (cb4 != 0)
+            cbb4 = (cb4 * 4);
+        if (cb3 == 0)
+            cbb3 = 1;
+        else if (cb3 != 0)
+            cbb3 = (cb3 * 3);
+        if (cb2 == 0)
+            cbb2 = 1;
+        else if (cb2 != 0)
+            cbb2 = (cb2 * 2);
+
+        if (cc4 == 0)
+            ccc4 = 1;
+        else if (cc4 != 0)
+            ccc4 = (cc4 * 4);
+        if (cc3 == 0)
+            ccc3 = 1;
+        else if (cc3 != 0)
+            ccc3 = (cc3 * 3);
+        if (cc2 == 0)
+            ccc2 = 1;
+        else if (cc2 != 0)
+            ccc2 = (cc2 * 2);
+
+        if (cd4 == 0)
+            cdd4 = 1;
+        else if (cd4 != 0)
+            cdd4 = (cd4 * 4);
+        if (cd3 == 0)
+            cdd3 = 1;
+        else if (cd3 != 0)
+            cdd3 = (cd3 * 3);
+        if (cd2 == 0)
+            cdd2 = 1;
+        else if (cd2 != 0)
+            cdd2 = (cd2 * 2);
+
+        if (ca1 == 0)
+            ca1 = 1;
+        if (cb1 == 0)
+            cb1 = 1;
+        if (cc1 == 0)
+            cc1 = 1;
+        if (cd1 == 0)
+            cd1 = 1;
+
+        if (caa4 == 1 && caa3 == 1 && caa2 == 1 && ca1 == 1)
+            caaa = 0;
+        else
+            caaa = (caa4/caa3/caa2/ca1);
+        if (cbb4 == 1 && cbb3 == 1 && cbb2 == 1 && cb1 == 1)
+            cbbb = 0;
+        else
+            cbbb = (cbb4/cbb3/cbb2/cb1);
+        if (ccc4 == 1 && ccc3 == 1 && ccc2 == 1 && cc1 == 1)
+            cccc = 0;
+        else
+            cccc = (ccc4/ccc3/ccc2/cc1);
+        if (cdd4 == 1 && cdd3 == 1 && cdd2 == 1 && cd1 == 1)
+            cddd = 0;
+        else
+            cddd = (cdd4/cdd3/cdd2/cd1);
+
+        tA = (4 * caaa);
+        tB = (3 * cbbb);
+        tC = (2 * cccc);
+        tD = (1 * cddd);
 
         score = tA + tB + tC + tD;
 
