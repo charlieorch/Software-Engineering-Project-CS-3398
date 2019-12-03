@@ -4,19 +4,24 @@ import homePage.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import options.OptionsPageController;
 
 import javax.xml.namespace.QName;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
 
-public class GPACalculatorController {
+public class GPACalculatorController implements Initializable {
     @FXML
     public Button backButton;
     @FXML
@@ -65,6 +70,8 @@ public class GPACalculatorController {
     private TextField d10;
     @FXML
     private TextField calcResults;
+    @FXML
+    private AnchorPane pane;
 
     public void gpaBack(ActionEvent actionEvent) throws IOException {
         Stage appStage;
@@ -76,37 +83,32 @@ public class GPACalculatorController {
         appStage.show();
     }
 
+    public ArrayList<TextField> getFields(){
+        ArrayList<TextField> feilds = new ArrayList<TextField>();
+        for (Node node : pane.getChildren()) {
+
+           if(node instanceof TextField){
+                feilds.add((TextField)node);
+            }
+        }
+        return feilds;
+    }
+
     public void saveData() throws IOException {
         FileWriter fileWriter = new FileWriter("GPA.txt");
         PrintWriter printWriter = new PrintWriter(fileWriter);
-        printWriter.println(total);
-        printWriter.println(a44);
-        printWriter.println(a43);
-        printWriter.println(a42);
-        printWriter.println(a41);
-        printWriter.println(a40);
-        printWriter.println(b34);
-        printWriter.println(b33);
-        printWriter.println(b32);
-        printWriter.println(b31);
-        printWriter.println(b30);
-        printWriter.println(c24);
-        printWriter.println(c23);
-        printWriter.println(c22);
-        printWriter.println(c21);
-        printWriter.println(c20);
-        printWriter.println(d14);
-        printWriter.println(d13);
-        printWriter.println(d12);
-        printWriter.println(d11);
-        printWriter.println(d10);
-        printWriter.println(calcResults);
+
+        ArrayList<TextField> feilds = getFields();
+
+        for(TextField field: feilds){
+            printWriter.println(field.getText());
+        }
 
         printWriter.close();
     }
 
     @FXML
-    public void gradeCalculate(ActionEvent event){
+    public void gradeCalculate(ActionEvent event) throws IOException {
         String totalG = total.getText();
         String a4 = a44.getText();
         String a3 = a43.getText();
@@ -309,6 +311,24 @@ public class GPACalculatorController {
         String totalCalculated = Double.toString(GPA);
         calcResults.setText(totalCalculated);
 
-        //saveData();
+        saveData();
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        if(new File("GPA.txt").exists()) {
+            BufferedReader reader = null;
+            try {
+                ArrayList<TextField> feilds = getFields();
+                reader = new BufferedReader(new FileReader("GPA.txt"));
+                String line = reader.readLine();
+                for(TextField field: feilds){
+                    field.setText(line);
+                    line = reader.readLine();
+                }
+            } catch(IOException e){
+                e.printStackTrace();
+            }
+        }
     }
 }
