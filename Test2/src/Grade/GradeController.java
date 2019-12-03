@@ -3,19 +3,24 @@ package Grade;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import options.OptionsPageController;
 
 import javax.xml.namespace.QName;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
 
-public class GradeController {
+public class GradeController implements Initializable {
     @FXML
     public Button backButton;
     @FXML
@@ -60,8 +65,10 @@ public class GradeController {
     private TextField percentNine;
     @FXML
     private TextField percentTen;
+    @FXML
+    private AnchorPane pane;
 
-    public void gradeBack(ActionEvent actionEvent) throws IOException {
+    public void gradeBack(ActionEvent actionEvent)  throws IOException {
         Stage appStage;
         Parent root;
         appStage=(Stage) backButton.getScene().getWindow();
@@ -71,35 +78,34 @@ public class GradeController {
         appStage.show();
     }
 
-    public static void saveData() throws IOException {
+    public ArrayList<TextField> getFields(){
+        ArrayList<TextField> feilds = new ArrayList<TextField>();
+        for (Node node : pane.getChildren()) {
+
+            if (node instanceof GridPane)
+                for (Node node2 : ((GridPane) node).getChildren()) {
+                    feilds.add((TextField)node2);
+                }
+            else if(node instanceof TextField){
+                feilds.add((TextField)node);
+            }
+        }
+        return feilds;
+    }
+    public void saveData() throws IOException {
         FileWriter fileWriter = new FileWriter("Grade.txt");
         PrintWriter printWriter = new PrintWriter(fileWriter);
-        /*printWriter.println(gradeOne);
-        printWriter.println(gradeTwo);
-        printWriter.println(gradeThree);
-        printWriter.println(gradeFour);
-        printWriter.println(gradeFive);
-        printWriter.println(gradeSix);
-        printWriter.println(gradeSeven);
-        printWriter.println(gradeEight);
-        printWriter.println(gradeNine);
-        printWriter.println(gradeTen);
-        printWriter.println(percentOne);
-        printWriter.println(percentTwo);
-        printWriter.println(percentThree);
-        printWriter.println(percentFour);
-        printWriter.println(percentFive);
-        printWriter.println(percentSix);
-        printWriter.println(percentSeven);
-        printWriter.println(percentEight);
-        printWriter.println(percentNine);
-        printWriter.println(percentTen);*/
+        ArrayList<TextField> feilds = getFields();
+
+        for(TextField field: feilds){
+            printWriter.println(field.getText());
+        }
 
         printWriter.close();
     }
 
     @FXML
-    private void calculateGrade(ActionEvent event){
+    private void calculateGrade(ActionEvent event) throws IOException {
         String gOne = gradeOne.getText();
         String gTwo = gradeTwo.getText();
         String gThree = gradeThree.getText();
@@ -221,6 +227,24 @@ public class GradeController {
         String calcTotal = Double.toString(total);
         calcResults.setText(calcTotal);
 
-        //saveData();
+        saveData();
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        if(new File("Grade.txt").exists()) {
+            BufferedReader reader = null;
+            try {
+                ArrayList<TextField> feilds = getFields();
+                reader = new BufferedReader(new FileReader("Grade.txt"));
+                String line = reader.readLine();
+                for(TextField field: feilds){
+                    field.setText(line);
+                    line = reader.readLine();
+                }
+                } catch(IOException e){
+                    e.printStackTrace();
+                }
+        }
     }
 }

@@ -13,7 +13,7 @@
    <children>
       <BorderPane prefHeight="200.0" prefWidth="200.0">
          <center>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="861.0" BorderPane.alignment="CENTER">
+            <AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="861.0" BorderPane.alignment="CENTER">
                <children>
                   <GridPane layoutX="198.0" layoutY="103.0">
                      <children>
@@ -75,11 +75,11 @@
                      </font>
                   </Label>
                   <TextField fx:id="calcResults" layoutX="162.0" layoutY="430.0" prefHeight="39.0" prefWidth="150.0" />
-                  <TextArea layoutX="530.0" layoutY="369.0" prefHeight="102.0" prefWidth="317.0" text="Don't let one bad grade define your abilities. &#10;It's a minor setback. &#10;How you choose to overcome it, &#10;is what sets you apart from the rest.">
+                  <Label layoutX="459.0" layoutY="336.0" prefHeight="114.0" prefWidth="389.0" text="Don't let one bad grade define your abilities. It's a minor setback. How you choose to overcome it, is what sets you apart from the rest." wrapText="true">
                      <font>
-                        <Font name="System Bold Italic" size="16.0" />
+                        <Font name="System Bold" size="18.0" />
                      </font>
-                  </TextArea>
+                  </Label>
                </children>
             </AnchorPane>
          </center>
