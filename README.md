@@ -83,7 +83,7 @@ Sprint 3
 * Charlie -
 * Sam -
 * Mesut -
-* Logan -
+* Logan - I created pages for a campus map and a list of on campus resources including phone numbers and locations. The map will help students find their way around campus. The school resources page will aid students in accessing helpful resources on campus. This commit shows the addition of the school resource page: https://github.com/CS3398-Enclave-Boys/CS3398-Enclave-F2019/commit/57324b98676944281d03475cb9f533307f024424
 
 ## Inspiration
 Add here credits. Project inspired by..., based on...
