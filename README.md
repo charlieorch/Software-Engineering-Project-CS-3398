@@ -60,7 +60,7 @@ Sprint 3
 * Erik -
 * Logan -
 * Charlie -
-* Sam -   
+* Sam - My next step is to further fix and tamper with the GPA Calculator by using a different and more efficient method that works better in our app. 
 * Mesut -
 
 ## Accomplishments
@@ -81,7 +81,7 @@ Sprint 2
 Sprint 3
 * Erik - I created an interface for creating new user accounts. This allows the user to create a username and password as well as upload their student schedule to make a new account within the application. These accounts allow for easy access to a students schedule and allows them to recieve notifications for when their class is about to begin and end depending on their settings. This is a commit that shows the new implementation for the new account interface: https://github.com/CS3398-Enclave-Boys/CS3398-Enclave-F2019/commit/468c7e82ed123c2b0bdbc67da4ce17c1825c81bc
 * Charlie -
-* Sam -
+* Sam - I created the save features for the Grade calculator as well as the GPA and Dining calculator. This allows the user to leave the window that they were in and come back to it with the same values that they were previously using to complete their task. Each individual text box is saved in a text document that is created when you enter your first input as either GPA, Grade, or Dining. I had trouble getting some of these to work but Erik helped me figure out and then update those commits to work correctly. Here is one of those commits: https://github.com/CS3398-Enclave-Boys/CS3398-Enclave-F2019/commit/68b0087c5bebdd74758124d9a132a6bd8ea1739d
 * Mesut -
 * Logan - I created pages for a campus map and a list of on campus resources including phone numbers and locations. The map will help students find their way around campus. The school resources page will aid students in accessing helpful resources on campus. This commit shows the addition of the school resource page: https://github.com/CS3398-Enclave-Boys/CS3398-Enclave-F2019/commit/57324b98676944281d03475cb9f533307f024424
 
