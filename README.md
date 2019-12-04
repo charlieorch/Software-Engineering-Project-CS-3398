@@ -79,7 +79,7 @@ Sprint 2
 * Mesut - I created the grade calculator interface and implemented functionality where the user can calculate their current grade in the class by typing what they had recieved on the assignment and the percentage the assignment is worth. It allows them to calculate as much to 10 assignments in one time. I also made changes in the swipe calculator and the graph which will show how many swipes the user has left from the beginning of the semester and the graph will show an illustration of how much they are spending. The functionality for swipe calculator will be done in the next sprint as well as improving the grade calculator. Here is the commit for the grade calculator: https://github.com/CS3398-Enclave-Boys/CS3398-Enclave-F2019/blob/master/Test2/src/Grade/GradeController.java
 
 Sprint 3
-* Erik -
+* Erik - I created an interface for creating new user accounts. This allows the user to create a username and password as well as upload their student schedule to make a new account within the application. These accounts allow for easy access to a students schedule and allows them to recieve notifications for when their class is about to begin and end depending on their settings. This is a commit that shows the new implementation for the new account interface: https://github.com/CS3398-Enclave-Boys/CS3398-Enclave-F2019/commit/468c7e82ed123c2b0bdbc67da4ce17c1825c81bc
 * Charlie -
 * Sam -
 * Mesut -
