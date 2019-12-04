@@ -61,7 +61,7 @@ Sprint 3
 * Logan -
 * Charlie -
 * Sam - My next step is to further fix and tamper with the GPA Calculator by using a different and more efficient method that works better in our app. 
-* Mesut -
+* Mesut - My next step is to add more functionality to line chart in Dining interface and make it more useful for the user.
 
 ## Accomplishments
 
