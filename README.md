@@ -59,7 +59,7 @@ Sprint 2
 Sprint 3
 * Erik -
 * Logan -
-* Charlie -
+* Charlie - My next step is to fix and clean up the dining page so that it can be more efficient for the user.
 * Sam - My next step is to further fix and tamper with the GPA Calculator by using a different and more efficient method that works better in our app. 
 * Mesut - My next step is to add more functionality to line chart in Dining interface and make it more useful for the user.
 
@@ -80,7 +80,7 @@ Sprint 2
 
 Sprint 3
 * Erik - I created an interface for creating new user accounts. This allows the user to create a username and password as well as upload their student schedule to make a new account within the application. These accounts allow for easy access to a students schedule and allows them to recieve notifications for when their class is about to begin and end depending on their settings. This is a commit that shows the new implementation for the new account interface: https://github.com/CS3398-Enclave-Boys/CS3398-Enclave-F2019/commit/468c7e82ed123c2b0bdbc67da4ce17c1825c81bc
-* Charlie -
+* Charlie - I created the clubs page for all clubs on campus that are available for students to choose from. This gives the user more user out of the application as well as have a better chance to get more integrated into Texas State life. I also gave this interface functionality as well. This is the commit for the implementation for the clubs interface: https://github.com/CS3398-Enclave-Boys/CS3398-Enclave-F2019/commit/457bf0211241f02431359aa99c1eeb7963056518
 * Sam - I created the save features for the Grade calculator as well as the GPA and Dining calculator. This allows the user to leave the window that they were in and come back to it with the same values that they were previously using to complete their task. Each individual text box is saved in a text document that is created when you enter your first input as either GPA, Grade, or Dining. I had trouble getting some of these to work but Erik helped me figure out and then update those commits to work correctly. Here is one of those commits: https://github.com/CS3398-Enclave-Boys/CS3398-Enclave-F2019/commit/68b0087c5bebdd74758124d9a132a6bd8ea1739d
 * Mesut - I improved the bugs i had in grade calculator and the graph for dining calculator. Improvements I had done in grade calculator is that the user doesn't have to fill up every box so that lets them to compute as much as they want to, and there was a improvement to the algorithm to compute the total grade because the previous algorithm was not giving accurate results. I added a graph to dining calculator that will show a burndown of their spendings of dining dollars. Here is one of those commits: https://github.com/CS3398-Enclave-Boys/CS3398-Enclave-F2019/commit/5d6f15de1fe0f1113481d7cdedd0d6ece03f2887
 * Logan - I created pages for a campus map and a list of on campus resources including phone numbers and locations. The map will help students find their way around campus. The school resources page will aid students in accessing helpful resources on campus. This commit shows the addition of the school resource page: https://github.com/CS3398-Enclave-Boys/CS3398-Enclave-F2019/commit/57324b98676944281d03475cb9f533307f024424
