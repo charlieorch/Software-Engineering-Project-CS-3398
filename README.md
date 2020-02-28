@@ -30,12 +30,8 @@ List of features ready and TODOs for future development
 * Academic Calender: Shows the students personal academic calender; Sam's user story
 * Meal Swipe Counter: Shows the student's current available meal swipes for dining halls; Mesut's user story
 
-To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
-
 ## Status
-Project is: in progress
+Project is: complete
 
 Sprint 1
 * Erik - My next step is to work on connecting our login page to the web connection functionality.
