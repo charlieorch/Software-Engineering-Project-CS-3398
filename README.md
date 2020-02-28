@@ -22,13 +22,7 @@ The purpose of this project is to help future Texas State students succeed acade
 ## Technologies
 * Jaunt - Java Web Scraping & JSON Querying
 * Texas State University API
-
-## Setup
-Describe how to install / setup your local environement / add link to demo version.
-
-## Code Examples
-Show examples of usage:
-`put-your-code-here`
+* JavaFX
 
 ## Features
 List of features ready and TODOs for future development
@@ -84,9 +78,6 @@ Sprint 3
 * Sam - I created the save features for the Grade calculator as well as the GPA and Dining calculator. This allows the user to leave the window that they were in and come back to it with the same values that they were previously using to complete their task. Each individual text box is saved in a text document that is created when you enter your first input as either GPA, Grade, or Dining. I had trouble getting some of these to work but Erik helped me figure out and then update those commits to work correctly. Here is one of those commits: https://github.com/CS3398-Enclave-Boys/CS3398-Enclave-F2019/commit/68b0087c5bebdd74758124d9a132a6bd8ea1739d
 * Mesut - I improved the bugs i had in grade calculator and the graph for dining calculator. Improvements I had done in grade calculator is that the user doesn't have to fill up every box so that lets them to compute as much as they want to, and there was a improvement to the algorithm to compute the total grade because the previous algorithm was not giving accurate results. I added a graph to dining calculator that will show a burndown of their spendings of dining dollars. Here is one of those commits: https://github.com/CS3398-Enclave-Boys/CS3398-Enclave-F2019/commit/5d6f15de1fe0f1113481d7cdedd0d6ece03f2887
 * Logan - I created pages for a campus map and a list of on campus resources including phone numbers and locations. The map will help students find their way around campus. The school resources page will aid students in accessing helpful resources on campus. This commit shows the addition of the school resource page: https://github.com/CS3398-Enclave-Boys/CS3398-Enclave-F2019/commit/57324b98676944281d03475cb9f533307f024424
-
-## Inspiration
-Add here credits. Project inspired by..., based on...
 
 ## Contact
 Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
